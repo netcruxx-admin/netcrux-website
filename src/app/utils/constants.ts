@@ -1,4 +1,4 @@
-import { FooterSocialType, NavItemType } from "./types"
+import { FooterSocialType, NavItemType, ServicesType, TeamType, ValuesType, whyChooseUsType } from "./types"
 
 const navItems: NavItemType[] = [
   {
@@ -37,6 +37,75 @@ const footerSocial: FooterSocialType[] = [
   },
 ]
 
+const services: ServicesType[] = [
+  {
+    title: "Mobile App Development",
+    desc: "Building native and cross-platform mobile applications for iOS and Android.",
+    icon: "fa:mobile",
+  },
+  {
+    title: "Web App Development",
+    desc: "Creating responsive and scalable web applications using the latest technologies.",
+    icon: "mdi:web",
+  },
+  {
+    title: "UI/UX Design",
+    desc: "Designing intuitive and engaging user interfaces for seamless experiences.",
+    icon: "mdi:design",
+  },
+]
+
+const team: TeamType[] = [
+  {
+    name: "Ethan Carter",
+    role: "CEO",
+  },
+  {
+    name: "Sophia Bennett",
+    role: "Head of Design",
+  },
+  {
+    name: "Liam Harper",
+    role: "Lead Developer",
+  },
+]
+
+const ourValues: ValuesType[] = [
+  {
+    title: "Collaboration",
+    desc: "We foster a collaborative environment, both internally and with our clients, to ensure seamless communication and project success.",
+    icon: "mdi:puzzle"
+  },
+  {
+    title: "Client-Centric",
+    desc: "Our clients are at the heart of everything we do. We prioritize their needs and goals, delivering solutions that align with their vision.",
+    icon: "mdi:people"
+  },
+  {
+    title: "Innovation",
+    desc: "We embrace innovation and stay ahead of the curve, leveraging the latest technologies to create cutting-edge solutions that drive results.",
+    icon: "mdi:rocket-outline"
+  },
+]
+
+const whyChooseUs: whyChooseUsType[] = [
+  {
+    title: "Technical Expertise",
+    desc: "Our team possesses deep technical expertise in mobile and web app development, ensuring robust and scalable solutions.",
+    icon: "mdi:code"
+  },
+  {
+    title: "Creative Design",
+    desc: "We combine technical prowess with creative design to deliver visually stunning and user-friendly applications.",
+    icon: "ph:pencil-line"
+  },
+  {
+    title: "Timely Delivery",
+    desc: "We understand the importance of deadlines and are committed to delivering projects on time and within budget.",
+    icon: "mdi:clock-outline"
+  },
+]
+
 const testimonialData = [
   {
     avtar: "https://randomuser.me/api/portraits/women/44.jpg",
@@ -66,33 +135,7 @@ const testimonialData = [
     comments: 2,
   },
 ]
-const services = [
-  {
-    title: "Mobile App Development",
-    desc: "Building native and cross-platform mobile applications for iOS and Android.",
-    img: "/serviceOne.png",
-  },
-  {
-    title: "Web App Development",
-    desc: "Creating responsive and scalable web applications using the latest technologies.",
-    img: "/serviceTwo.png",
-  },
-  {
-    title: "UI/UX Design",
-    desc: "Designing intuitive and engaging user interfaces for seamless experiences.",
-    img: "/serviceThree.png",
-  },
-  {
-    title: "Web App Development",
-    desc: "Creating responsive and scalable web applications using the latest technologies.",
-    img: "/serviceTwo.png",
-  },
-  {
-    title: "UI/UX Design",
-    desc: "Designing intuitive and engaging user interfaces for seamless experiences.",
-    img: "/serviceThree.png",
-  },
-]
+
 const ourWorkData = [
   {
     title: "EcoTrack",
@@ -168,61 +211,6 @@ const featuredArticles = [
 ]
 
 //about data
-
-const team = [
-  {
-    name: "Ethan Carter",
-    role: "CEO",
-    img: "/avatar.png",
-  },
-  {
-    name: "Sophia Bennett",
-    role: "Head of Design",
-    img: "/avatar.png",
-  },
-  {
-    name: "Liam Harper",
-    role: "Lead Developer",
-    img: "/avatar.png",
-  },
-]
-
-const values = [
-  {
-    title: "Collaboration",
-    desc: "We foster a collaborative environment, both internally and with our clients, to ensure seamless communication and project success.",
-    // icon: <FaUserTie className="text-gray-200 text-2xl mb-3" />,
-  },
-  {
-    title: "Client-Centric",
-    desc: "Our clients are at the heart of everything we do. We prioritize their needs and goals, delivering solutions that align with their vision.",
-    // icon: <FaUserTie className="text-gray-200 text-2xl mb-3" />,
-  },
-  {
-    title: "Innovation",
-    desc: "We embrace innovation and stay ahead of the curve, leveraging the latest technologies to create cutting-edge solutions that drive results.",
-    // icon: <FaLightbulb className="text-gray-200 text-2xl mb-3" />,
-  },
-]
-
-const chooseUs = [
-  {
-    title: "Technical Expertise",
-    desc: "Our team possesses deep technical expertise in mobile and web app development, ensuring robust and scalable solutions.",
-    // icon: <FaCogs className="text-gray-200 text-2xl mb-3" />,
-  },
-  {
-    title: "Creative Design",
-    desc: "We combine technical prowess with creative design to deliver visually stunning and user-friendly applications.",
-    // icon: <FaPencilRuler className="text-gray-200 text-2xl mb-3" />,
-  },
-  {
-    title: "Timely Delivery",
-    desc: "We understand the importance of deadlines and are committed to delivering projects on time and within budget.",
-    // icon: <FaClock className="text-gray-200 text-2xl mb-3" />,
-  },
-]
-
 const projectsHere = [
   {
     title: "Mobile App Development",
@@ -254,14 +242,14 @@ const projectsHere = [
 export {
   navItems,
   footerSocial,
+  team,
+  whyChooseUs,
+  ourValues,
   testimonialData,
   services,
   ourWorkData,
   resources,
   topArticles,
   featuredArticles,
-  team,
-  chooseUs,
-  values,
   projectsHere,
 }

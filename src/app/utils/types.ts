@@ -9,4 +9,27 @@ type FooterSocialType = {
   path: string
 }
 
-export type { NavItemType, FooterSocialType }
+type ServicesType = {
+  title: string,
+  desc: string,
+  icon: string
+}
+
+type TeamType = {
+  name: string,
+  role: string,
+}
+
+type ValuesType = {
+  title: string,
+  desc: string,
+  icon: string
+}
+
+type whyChooseUsType = {
+  title: string,
+  desc: string,
+  icon: string
+}
+
+export type { NavItemType, FooterSocialType, ServicesType, TeamType, ValuesType, whyChooseUsType }
