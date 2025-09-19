@@ -117,7 +117,7 @@ export default function HomePage() {
                 </div>
 
                 <h4 className="mb-3 text-lg text-yellow-400">
-                  {Array.from(item.rating).map(() => {
+                  {Array.from({ length: item.rating }).map(() => {
                     return "⭐"
                   })}
                 </h4>
