@@ -1,5 +1,5 @@
 import { Icon } from "@iconify/react"
-import { whyChooseUs, ourValues, team } from "../../utils/constants"
+import { whyChooseUs, ourValues, team } from "@/lib/constants"
 
 export default function Page() {
   return (
