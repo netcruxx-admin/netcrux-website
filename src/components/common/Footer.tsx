@@ -1,12 +1,13 @@
-import { footerSocial, navItems } from "@/lib/constants"
-import { Icon } from "@iconify/react"
 import Link from "next/link"
+import { Icon } from "@iconify/react"
+
+import { footerSocial, navItems } from "@/lib/constants"
 
 export default function Footer() {
   return (
-    <footer className="bg-primary-700 flex flex-col items-center px-6 py-12 text-white md:px-12">
+    <footer className="flex flex-col items-center px-6 py-12 text-white md:px-12">
+      {/* main footer */}
       <div className="flex w-full flex-col items-center justify-between md:mb-6 md:flex-row">
-        {/* Navigation Links */}
         <div className="mb-6 flex flex-wrap justify-center gap-6 text-sm text-gray-300 md:mb-0 md:text-base">
           {navItems.map((item) => {
             return (
@@ -16,8 +17,6 @@ export default function Footer() {
             )
           })}
         </div>
-
-        {/* Social Icons */}
         <div className="mb-6 flex gap-6 md:mb-0">
           {footerSocial.map((item) => {
             return (

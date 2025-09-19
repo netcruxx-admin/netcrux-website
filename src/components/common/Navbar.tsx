@@ -1,10 +1,11 @@
 "use client"
 
-import { navItems } from "@/lib/constants"
-import { Icon } from "@iconify/react"
+import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { useState } from "react"
+import { Icon } from "@iconify/react"
+
+import { navItems } from "@/lib/constants"
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -13,42 +14,49 @@ export default function Navbar() {
     setIsOpen(!isOpen)
   }
 
+  function toggleNavOnClick() {
+    toggleMobileNav()
+  }
+
+  function handleIconClick() {
+    if (isOpen) {
+      setIsOpen(false)
+    }
+  }
+
   return (
-    <nav className="relative flex items-center justify-between border-b-4 border-white px-6 py-4 text-white md:px-10">
-      <Link href="/">
-        <Image src="/logo.png" width={148} height={48} priority alt="Net-crux IT Services" />
+    <nav className="relative flex items-center justify-between border-b-4 border-white px-6 py-4 md:px-10">
+      <Link href="/" onClick={handleIconClick}>
+        <Image src="/logo.png" width={148} height={48} alt="Net-crux IT Services" />
       </Link>
-      {/* Desktop*/}
+      {/* Desktop nav */}
       <div className="hidden md:flex md:items-center">
-        <ul className="mr-4 flex gap-6">
+        <ul className="mr-10 flex gap-6">
           {navItems.map((item) => (
             <Link href={item.path} key={item.name} className="cursor-pointer">
               {item.name}
             </Link>
           ))}
         </ul>
-        <button className="hover:button-gradient rounded bg-white bg-gradient-to-r from-white to-white px-4 py-2 font-bold text-black transition-all duration-150 ease-in-out">
+        <button className="hover:button-gradient cursor-pointer rounded bg-white px-4 py-2 font-bold text-black">
           Get a Quote
         </button>
       </div>
-      {/* Mobile view */}
-      <button
-        className="text-primary-100 cursor-pointer text-3xl md:hidden"
-        onClick={toggleMobileNav}
-      >
+      {/* Mobile nav */}
+      <button className="text-primary-100 text-3xl md:hidden" onClick={toggleMobileNav}>
         {isOpen ? <Icon icon="mdi:close" /> : <Icon icon="mdi:menu" />}
       </button>
-      {/* Mobile view */}
+      {/* Mobile menu */}
       {isOpen && (
-        <div className="absolute top-full left-0 z-10 flex w-full flex-col items-center bg-black text-center md:hidden">
-          <ul className="flex flex-col gap-4 py-6">
+        <div className="bg-primary-700 absolute top-full left-0 z-10 flex w-full flex-col items-center gap-y-6 border-t-4 border-white py-6 text-center md:hidden">
+          <ul className="flex flex-col gap-4">
             {navItems.map((item, index) => (
-              <Link href={item.path} key={index} className="cursor-pointer hover:text-blue-400">
+              <Link href={item.path} key={index} onClick={toggleNavOnClick}>
                 {item.name}
               </Link>
             ))}
           </ul>
-          <button className="hover:button-gradient mb-6 rounded bg-white px-4 py-2 font-bold text-black transition-all">
+          <button className="active:button-gradient rounded bg-white px-4 py-2 font-bold text-black transition-all">
             Get a Quote
           </button>
         </div>

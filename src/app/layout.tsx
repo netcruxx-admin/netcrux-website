@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { Raleway } from "next/font/google"
 import "./globals.css"
+
 import Navbar from "../components/common/Navbar"
 import Footer from "../components/common/Footer"
 import Cta from "../components/common/Cta"

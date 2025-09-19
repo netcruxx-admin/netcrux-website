@@ -54,6 +54,17 @@ type whyChooseUsType = {
   icon: string
 }
 
+type resourcesType = {
+  title: string,
+}
+
+type articleType = {
+  title: string,
+  desc: string,
+  img: string,
+  category?: string,
+}
+
 export type {
   NavItemType,
   FooterSocialType,
@@ -64,4 +75,6 @@ export type {
   TeamType,
   ValuesType,
   whyChooseUsType,
+  resourcesType,
+  articleType
 }

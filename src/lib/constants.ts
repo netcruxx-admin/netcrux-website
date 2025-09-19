@@ -1,8 +1,10 @@
 import {
+  articleType,
   ExpertiseType,
   FooterSocialType,
   NavItemType,
   ourWorkType,
+  resourcesType,
   ServicesType,
   TeamType,
   TestimonialsType,
@@ -134,6 +136,26 @@ const ourWork: ourWorkType[] = [
     desc: "A susutainbility living app promotting eco-friendly habits.",
     img: "/service-two.png",
   },
+  {
+    title: "EcoTrack",
+    desc: "A susutainbility living app promotting eco-friendly habits.",
+    img: "/service-one.png",
+  },
+  {
+    title: "HealthHub",
+    desc: "A susutainbility living app promotting eco-friendly habits.",
+    img: "/service-two.png",
+  },
+  {
+    title: "EduConnect",
+    desc: "A susutainbility living app promotting eco-friendly habits.",
+    img: "/service-three.png",
+  },
+  {
+    title: "FinWise",
+    desc: "A susutainbility living app promotting eco-friendly habits.",
+    img: "/service-two.png",
+  },
 ]
 
 const services: ServicesType[] = [
@@ -205,7 +227,7 @@ const whyChooseUs: whyChooseUsType[] = [
   },
 ]
 
-const resources = [
+const resources: resourcesType[] = [
   {
     title: "Mobile App Development Checklist",
   },
@@ -217,42 +239,42 @@ const resources = [
   },
 ]
 
-const topArticles = [
+const topArticles: articleType[] = [
   {
-    img: "/publicImage.png",
+    img: "/public-image.png",
     title: "The Future of Mobile App Development: Trends to Watch in 2024",
     desc: "Explore the latest trends shaping the mobile app landscape in 2024, from AI integration to AR.",
   },
   {
-    img: "/publicImage.png",
+    img: "/public-image.png",
     title: "Web App Development: Best Practices for Scalability and Performance",
     desc: "Learn essential strategies for building applications that can handle rapid growth.",
   },
   {
-    img: "/publicImage.png",
+    img: "/public-image.png",
     title: "Choosing the Right Technology Stack for Your App",
     desc: "Get expert advice on selecting the ideal technology stack for your app.",
   },
 ]
 
-const featuredArticles = [
+const featuredArticles: articleType[] = [
   {
     category: "Mobile App Development",
     title: "Building a Successful App: From Concept to Launch",
     desc: "A step-by-step guide to creating a successful mobile app, from ideation to launch.",
-    img: "/publicImage.png",
+    img: "/public-image.png",
   },
   {
     category: "Web App Development",
     title: "Optimizing Your Web App for User Experience",
     desc: "Discover techniques to enhance your web app’s user experience, including responsive design.",
-    img: "/publicImage.png",
+    img: "/public-image.png",
   },
   {
     category: "Technology Trends",
     title: "The Rise of Serverless Architecture: Benefits and Use Cases",
     desc: "Explore the advantages of serverless architecture, including scalability and cost savings.",
-    img: "/publicImage.png",
+    img: "/public-image.png",
   },
 ]
 

@@ -11,6 +11,7 @@ export default function HomePage() {
             <Image
               src="/hero-image.png"
               fill
+              priority
               alt="background image of a computer."
               className="object-cover object-[100%_center]"
             />
@@ -47,11 +48,17 @@ export default function HomePage() {
               {expertise.map((item, i) => {
                 return (
                   <CarouselItem key={i} className="select-none md:basis-64 lg:basis-1/3">
-                    <div className="overflow-hidden rounded-2xl bg-black shadow-lg">
+                    <div className="flex h-full flex-col overflow-hidden rounded-2xl bg-black shadow-lg">
                       <div className="relative h-52 w-full md:h-64">
-                        <Image src={item.img} fill alt="" className="object-cover" />
+                        <Image
+                          src={item.img}
+                          fill
+                          alt=""
+                          sizes="(max-width: 768px) 100vw, (max-width:1024px) 25vw, 33vw"
+                          className="object-cover"
+                        />
                       </div>
-                      <div className="p-6 text-left">
+                      <div className="flex-1 p-6 text-left">
                         <h3 className="mb-2 text-lg font-semibold md:text-xl">{item.title}</h3>
                         <p className="text-sm text-gray-400 md:text-base">{item.desc}</p>
                       </div>
@@ -81,7 +88,13 @@ export default function HomePage() {
                   <CarouselItem key={i} className="select-none md:basis-64 lg:basis-1/3">
                     <div className="overflow-hidden rounded-2xl bg-black shadow-lg">
                       <div className="relative h-52 w-full md:h-64">
-                        <Image src={item.img} fill alt="" className="object-cover" />
+                        <Image
+                          src={item.img}
+                          fill
+                          alt=""
+                          sizes="(max-width: 768px) 100vw, (max-width:1024px) 25vw, 33vw"
+                          className="object-cover"
+                        />
                       </div>
 
                       <div className="p-6 text-left">

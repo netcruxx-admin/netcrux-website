@@ -1,4 +1,5 @@
 import { Icon } from "@iconify/react"
+
 import { services } from "@/lib/constants"
 
 export default function Page() {
