@@ -1,5 +1,5 @@
 import React from "react"
-import { ourWorkData } from "../../utils/constants"
+import { ourWork } from "@/lib/constants"
 import Image from "next/image"
 
 export default function Page() {
@@ -13,7 +13,7 @@ export default function Page() {
       </p>
 
       <div className="-mx-4 mb-10 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
-        {ourWorkData.map((item, i) => {
+        {ourWork.map((item, i) => {
           return (
             <div key={i} className="flex flex-col items-center gap-2 p-4 text-center">
               <Image src="/work.png" width={256} height={208} alt="" className="rounded-4xl" />

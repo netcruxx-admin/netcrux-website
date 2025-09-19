@@ -1,6 +1,6 @@
 "use client"
 
-import { navItems } from "@/app/utils/constants"
+import { navItems } from "@/lib/constants"
 import { Icon } from "@iconify/react"
 import Image from "next/image"
 import Link from "next/link"

@@ -1,4 +1,4 @@
-import { footerSocial, navItems } from "@/app/utils/constants"
+import { footerSocial, navItems } from "@/lib/constants"
 import { Icon } from "@iconify/react"
 import Link from "next/link"
 
