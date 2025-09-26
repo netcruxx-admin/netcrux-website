@@ -51,7 +51,7 @@ const footerSocial: FooterSocialType[] = [
 
 const testimonials: TestimonialsType[] = [
   {
-    avatar: "https://randomuser.me/api/portraits/women/44.jpg",
+    avatar: "/ava-harper.jpg",
     reviewer: "Ava Harper",
     reviewDate: "2023-08-15",
     rating: 4,
@@ -61,7 +61,7 @@ const testimonials: TestimonialsType[] = [
     comments: 1,
   },
   {
-    avatar: "https://randomuser.me/api/portraits/men/46.jpg",
+    avatar: "/liam-foster.jpg",
     reviewer: "Liam Foster",
     reviewDate: "2023-09-22",
     rating: 4,
@@ -71,7 +71,7 @@ const testimonials: TestimonialsType[] = [
     comments: 0,
   },
   {
-    avatar: "https://randomuser.me/api/portraits/women/48.jpg",
+    avatar: "/chloe-reed.jpg",
     reviewer: "Chloe Reed",
     reviewDate: "2023-10-10",
     rating: 4,
