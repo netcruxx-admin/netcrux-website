@@ -28,12 +28,36 @@ export default function Page() {
           >
             <ProjectGallery images={item.images} category={item.category} title={item.title} />
             <div className="p-5">
-              <h2 className="mb-2 text-lg font-bold">{item.title}</h2>
+              {item.link ? (
+                <Link
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group/title mb-2 inline-flex items-center gap-1.5 text-lg font-bold hover:text-accent"
+                >
+                  {item.title}
+                  <Icon icon="mdi:open-in-new" className="size-4 opacity-0 transition group-hover/title:opacity-100" />
+                </Link>
+              ) : (
+                <h2 className="mb-2 text-lg font-bold">{item.title}</h2>
+              )}
               <p className="mb-4 text-sm text-gray-500">{item.desc}</p>
-              <p className="flex items-center gap-1.5 text-sm font-medium text-accent">
-                <Icon icon="mdi:trending-up" className="size-4" />
-                {item.result}
-              </p>
+              {item.link ? (
+                <Link
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1.5 text-sm font-medium text-accent underline-offset-2 hover:underline"
+                >
+                  <Icon icon="mdi:trending-up" className="size-4" />
+                  {item.result}
+                </Link>
+              ) : (
+                <p className="flex items-center gap-1.5 text-sm font-medium text-accent">
+                  <Icon icon="mdi:trending-up" className="size-4" />
+                  {item.result}
+                </p>
+              )}
             </div>
           </div>
         ))}

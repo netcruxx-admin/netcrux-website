@@ -194,12 +194,16 @@ export default function ContactPage() {
               className="flex items-start gap-3 rounded-xl border border-gray-200 bg-white shadow-sm p-4"
             >
               <div className="flex size-10 shrink-0 items-center justify-center rounded-lg border border-gray-200 bg-white">
-                <Icon icon={d.icon} className="size-5" />
+                <Icon icon={d.icon} className="size-5 text-accent" />
               </div>
               <div>
                 <p className="text-xs text-gray-500">{d.label}</p>
                 {d.label === "Email" ? (
                   <a href={`mailto:${d.value}`} className="text-sm font-medium hover:underline">
+                    {d.value}
+                  </a>
+                ) : d.label === "Phone" ? (
+                  <a href={`tel:${d.value.replace(/\s/g, "")}`} className="text-sm font-medium hover:underline">
                     {d.value}
                   </a>
                 ) : (

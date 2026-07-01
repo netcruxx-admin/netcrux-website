@@ -15,22 +15,16 @@ import Reveal from "@/components/common/Reveal"
 import CountUp from "@/components/common/CountUp"
 import ProjectGallery from "@/components/common/ProjectGallery"
 import AccentSwitcher from "@/components/common/AccentSwitcher"
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel"
+import ExpertiseCarousel from "@/components/common/ExpertiseCarousel"
 
 export default function HomePage() {
   return (
     <main>
       {/* Animated ambient background */}
       <div aria-hidden className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
-        <div className="animate-float absolute -top-24 left-1/4 size-96 rounded-full bg-accent/30 blur-3xl" />
-        <div className="animate-float absolute top-1/3 -right-24 size-80 rounded-full bg-accent/25 blur-3xl [animation-delay:-5s]" />
-        <div className="animate-float absolute bottom-0 left-0 size-96 rounded-full bg-accent/20 blur-3xl [animation-delay:-9s]" />
+        <div className="animate-float absolute -top-24 left-1/4 size-96 rounded-full bg-accent/30 blur-2xl [will-change:transform]" />
+        <div className="animate-float absolute top-1/3 -right-24 size-80 rounded-full bg-accent/25 blur-2xl [animation-delay:-5s] [will-change:transform]" />
+        <div className="animate-float absolute bottom-0 left-0 size-96 rounded-full bg-accent/20 blur-2xl [animation-delay:-9s] [will-change:transform]" />
       </div>
 
       <header className="flex justify-center px-4 py-12 md:px-8">
@@ -115,33 +109,7 @@ export default function HomePage() {
             From first sketch to global scale, we bring together design, engineering, and cloud
             know-how to build digital products that perform — and keep performing.
           </p>
-          <Carousel opts={{ align: "start", loop: true }} className="cursor-grab">
-            <CarouselContent className="max-w-full">
-              {expertise.map((item, i) => {
-                return (
-                  <CarouselItem key={i} className="select-none md:basis-64 lg:basis-1/3">
-                    <div className="card-hover flex h-full flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg hover:border-gray-300">
-                      <div className="relative h-52 w-full md:h-64">
-                        <Image
-                          src={item.img}
-                          fill
-                          alt={item.title}
-                          sizes="(max-width: 768px) 100vw, (max-width:1024px) 25vw, 33vw"
-                          className="object-cover"
-                        />
-                      </div>
-                      <div className="flex-1 p-6 text-left">
-                        <h3 className="mb-2 text-lg font-semibold md:text-xl">{item.title}</h3>
-                        <p className="text-sm text-gray-500 md:text-base">{item.desc}</p>
-                      </div>
-                    </div>
-                  </CarouselItem>
-                )
-              })}
-            </CarouselContent>
-            <CarouselPrevious className="hidden md:flex" />
-            <CarouselNext className="hidden md:flex" />
-          </Carousel>
+          <ExpertiseCarousel items={expertise} />
         </Reveal>
       </section>
 
@@ -164,14 +132,39 @@ export default function HomePage() {
                     images={item.images}
                     category={item.category}
                     title={item.title}
+                    startDelay={Math.round((i * 3500) / 3)}
                   />
                   <div className="p-6 text-left">
-                    <h3 className="mb-2 text-lg font-semibold md:text-xl">{item.title}</h3>
+                    {item.link ? (
+                      <Link
+                        href={item.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group/title mb-2 inline-flex items-center gap-1.5 text-lg font-semibold hover:text-accent md:text-xl"
+                      >
+                        {item.title}
+                        <Icon icon="mdi:open-in-new" className="size-4 opacity-0 transition group-hover/title:opacity-100" />
+                      </Link>
+                    ) : (
+                      <h3 className="mb-2 text-lg font-semibold md:text-xl">{item.title}</h3>
+                    )}
                     <p className="mb-4 text-sm text-gray-500 md:text-base">{item.desc}</p>
-                    <p className="flex items-center gap-1.5 text-sm font-medium text-accent">
-                      <Icon icon="mdi:trending-up" className="size-4" />
-                      {item.result}
-                    </p>
+                    {item.link ? (
+                      <Link
+                        href={item.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1.5 text-sm font-medium text-accent underline-offset-2 hover:underline"
+                      >
+                        <Icon icon="mdi:trending-up" className="size-4" />
+                        {item.result}
+                      </Link>
+                    ) : (
+                      <p className="flex items-center gap-1.5 text-sm font-medium text-accent">
+                        <Icon icon="mdi:trending-up" className="size-4" />
+                        {item.result}
+                      </p>
+                    )}
                   </div>
                 </div>
               </Reveal>

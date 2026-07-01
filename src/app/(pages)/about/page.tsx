@@ -105,12 +105,12 @@ export default function Page() {
         ))}
       </div>
 
-      <Link
+      {/* <Link
         href="/contact"
         className="button-gradient mx-auto block w-fit rounded-lg px-6 py-3 text-sm font-bold text-white shadow-md transition-all hover:scale-105 hover:brightness-110"
       >
         Contact Us
-      </Link>
+      </Link> */}
     </main>
   )
 }

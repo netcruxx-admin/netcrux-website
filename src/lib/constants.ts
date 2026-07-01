@@ -43,8 +43,8 @@ const navItems: NavItemType[] = [
 // NOTE: Update these with Net-Crux's real contact details before going live.
 const contactInfo: ContactInfoType = {
   email: "netcruxx@gmail.com",
-  phone: "+91 98765 43210",
-  location: "Remote-first · India",
+  phone: "+91 89883 84800",
+  location: "RCC Building, Civil Lines, Dharamshala, Distt Kangra HP 176215",
   hours: "Mon–Fri, 9:00 AM – 6:00 PM IST",
 }
 
@@ -172,6 +172,7 @@ const ourWork: ourWorkType[] = [
     desc: "A ride-hailing app for booking taxis on demand, with real-time driver tracking, upfront fare estimates, and secure in-app payments.",
     result: "Live ride tracking & instant booking",
     images: ["/medy.jpeg", "/medy1.jpeg", "/medy2.jpeg", "/medy3.jpeg"],
+    link: "https://play.google.com/store/apps/details?id=com.medy.passenger",
   },
   {
     title: "Medicare",

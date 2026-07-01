@@ -33,6 +33,7 @@ type ourWorkType = {
   images: string[]
   category: string
   result: string
+  link?: string
 }
 
 type ServicesType = {
