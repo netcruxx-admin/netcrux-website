@@ -4,14 +4,21 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --color-primary-700: #121417;
-  --color-primary-500: #9cabba;
-  --color-primary-400: #e5e8eb;
-  --color-primary-100: #ffffff;
+  /* ---- Soft Light theme ---- */
+  --color-primary-700: #fafaf8; /* app background (warm off-white) */
+  --color-primary-500: #5b6b73; /* muted text */
+  --color-primary-400: #2b3a42;
+  --color-primary-100: #14202b; /* base text (near-black) */
 
-  --color-blue-500: #3d99f5;
+  /* Switchable accent (driven by --accent vars, see :root + [data-accent]) */
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
 
-  --font-raleway: var(--font-raleway);
+  --font-sans:
+    var(--app-font-body), ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    sans-serif;
+  --font-display:
+    var(--app-font-display), ui-sans-serif, system-ui, sans-serif;
 
   /* shad-cn variables */
   --color-sidebar-ring: var(--sidebar-ring);
@@ -52,7 +59,109 @@
 }
 
 @utility button-gradient {
-  background: linear-gradient(135deg, #1da28a, #256dab, #8149b7);
+  background: var(--accent-grad);
+  color: #ffffff;
+}
+
+@utility brand-gradient {
+  background: var(--accent-grad);
+}
+
+@utility accent-text-gradient {
+  background: var(--accent-grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ---------- Switchable accent presets ---------- */
+:root {
+  /* default: Teal Blue */
+  --accent: #1f7796;
+  --accent-hover: #185e78;
+  --accent-rgb: 31, 119, 150;
+  --accent-grad: linear-gradient(135deg, #1f7796, #2b8fb0, #46b6d6);
+}
+[data-accent="blue"] {
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --accent-rgb: 37, 99, 235;
+  --accent-grad: linear-gradient(135deg, #2563eb, #3b82f6, #60a5fa);
+}
+[data-accent="sky"] {
+  --accent: #0ea5e9;
+  --accent-hover: #0284c7;
+  --accent-rgb: 14, 165, 233;
+  --accent-grad: linear-gradient(135deg, #06b6d4, #0ea5e9, #3b82f6);
+}
+[data-accent="teal"] {
+  --accent: #1f7796;
+  --accent-hover: #185e78;
+  --accent-rgb: 31, 119, 150;
+  --accent-grad: linear-gradient(135deg, #1f7796, #2b8fb0, #46b6d6);
+}
+[data-accent="slate"] {
+  --accent: #475569;
+  --accent-hover: #334155;
+  --accent-rgb: 71, 85, 105;
+  --accent-grad: linear-gradient(135deg, #334155, #475569, #64748b);
+}
+[data-accent="rose"] {
+  --accent: #e11d48;
+  --accent-hover: #be123c;
+  --accent-rgb: 225, 29, 72;
+  --accent-grad: linear-gradient(135deg, #f43f5e, #e11d48, #be123c);
+}
+[data-accent="green"] {
+  --accent: #059669;
+  --accent-hover: #047857;
+  --accent-rgb: 5, 150, 105;
+  --accent-grad: linear-gradient(135deg, #10b981, #059669, #14b8a6);
+}
+[data-accent="gradient"] {
+  --accent: #7c3aed;
+  --accent-hover: #6d28d9;
+  --accent-rgb: 124, 58, 237;
+  --accent-grad: linear-gradient(135deg, #10b981, #3b82f6, #8b5cf6);
+}
+
+/* ---------- Switchable font-family presets ---------- */
+:root {
+  /* default: Bricolage Grotesque headings + DM Sans body */
+  --app-font-body: var(--font-dm-sans);
+  --app-font-display: var(--font-bricolage);
+}
+[data-font="default"] {
+  --app-font-body: var(--font-inter);
+  --app-font-display: var(--font-space-grotesk);
+}
+[data-font="jakarta"] {
+  --app-font-body: var(--font-jakarta);
+  --app-font-display: var(--font-jakarta);
+}
+[data-font="sora"] {
+  --app-font-body: var(--font-inter);
+  --app-font-display: var(--font-sora);
+}
+[data-font="manrope"] {
+  --app-font-body: var(--font-manrope);
+  --app-font-display: var(--font-manrope);
+}
+[data-font="outfit"] {
+  --app-font-body: var(--font-outfit);
+  --app-font-display: var(--font-outfit);
+}
+[data-font="poppins"] {
+  --app-font-body: var(--font-poppins);
+  --app-font-display: var(--font-poppins);
+}
+[data-font="bricolage"] {
+  --app-font-body: var(--font-dm-sans);
+  --app-font-display: var(--font-bricolage);
+}
+[data-font="figtree"] {
+  --app-font-body: var(--font-figtree);
+  --app-font-display: var(--font-figtree);
 }
 
 :root {
@@ -128,7 +237,217 @@
   * {
     @apply border-border outline-ring/50;
   }
+  html {
+    /* Subtle global up-scale: every rem-based size grows proportionally */
+    font-size: 105%;
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
   body {
-    @apply bg-background text-foreground;
+    background-color: #e4eff2;
+    background-image:
+      radial-gradient(70% 55% at 50% -12%, rgba(var(--accent-rgb), 0.4), transparent 70%),
+      radial-gradient(55% 50% at 100% 0%, rgba(var(--accent-rgb), 0.3), transparent 68%),
+      radial-gradient(60% 55% at 0% 18%, rgba(var(--accent-rgb), 0.24), transparent 68%),
+      radial-gradient(65% 60% at 50% 110%, rgba(var(--accent-rgb), 0.2), transparent 70%);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    line-height: 1.65;
+    letter-spacing: 0.01em;
+    font-feature-settings: "cv11", "ss01";
+    text-rendering: optimizeLegibility;
+  }
+
+  /* All headings use the display typeface with tightened tracking */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.12;
+    text-wrap: balance;
+  }
+
+  h1 {
+    letter-spacing: -0.035em;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+}
+
+/* ---------- Animations ---------- */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes float-blob {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(40px, -30px) scale(1.1);
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 rgba(var(--accent-rgb), 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(var(--accent-rgb), 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(var(--accent-rgb), 0);
+  }
+}
+
+/* Hero: slow Ken Burns zoom + pan (layered after the initial fade-in) */
+@keyframes ken-burns {
+  from {
+    transform: scale(1.05) translate(0, 0);
+  }
+  to {
+    transform: scale(1.18) translate(-1.5%, -1.5%);
+  }
+}
+
+/* Hero: softly breathing accent spotlight */
+@keyframes spotlight {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: translateX(-50%) scale(1.12);
+  }
+}
+
+/* Hero: gradient sheen sweeping across highlighted heading text */
+@keyframes text-shimmer {
+  from {
+    background-position: 200% 0;
+  }
+  to {
+    background-position: -200% 0;
+  }
+}
+
+.animate-hero-image {
+  animation:
+    fade-in 1.4s ease both,
+    ken-burns 22s ease-in-out 1.4s infinite alternate;
+}
+
+.animate-spotlight {
+  animation: spotlight 9s ease-in-out infinite;
+}
+
+.animate-text-shimmer {
+  animation: text-shimmer 6s linear infinite;
+}
+
+.animate-fade-up {
+  animation: fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.9s ease both;
+}
+
+.animate-float {
+  animation: float-blob 16s ease-in-out infinite;
+}
+
+.animate-marquee {
+  animation: marquee 35s linear infinite;
+}
+
+.pulse-dot {
+  animation: pulse-ring 2s ease-out infinite;
+}
+
+/* Scroll-reveal: hidden until JS adds .is-visible */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Card lift + accent glow on hover */
+.card-hover {
+  transition:
+    transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 44px -16px rgba(var(--accent-rgb), 0.3);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .animate-fade-up,
+  .animate-fade-in,
+  .animate-float,
+  .animate-marquee,
+  .pulse-dot,
+  .animate-hero-image,
+  .animate-spotlight,
+  .animate-text-shimmer {
+    animation: none;
+  }
+  .animate-text-shimmer {
+    color: #fff;
+  }
+  .card-hover:hover {
+    transform: none;
   }
 }

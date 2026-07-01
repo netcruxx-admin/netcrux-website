@@ -11,6 +11,8 @@ type FooterSocialType = {
 
 type TestimonialsType = {
   reviewer: string
+  role: string
+  company: string
   avatar: string
   reviewDate: string
   rating: number
@@ -28,7 +30,9 @@ type ExpertiseType = {
 type ourWorkType = {
   title: string
   desc: string
-  img: string
+  images: string[]
+  category: string
+  result: string
 }
 
 type ServicesType = {
@@ -55,14 +59,46 @@ type whyChooseUsType = {
 }
 
 type resourcesType = {
-  title: string,
+  title: string
 }
 
 type articleType = {
-  title: string,
-  desc: string,
-  img: string,
-  category?: string,
+  title: string
+  desc: string
+  img: string
+  category?: string
+  author?: string
+  date?: string
+  readTime?: string
+}
+
+type StatType = {
+  value: string
+  label: string
+}
+
+type ProcessStepType = {
+  step: string
+  title: string
+  desc: string
+  icon: string
+}
+
+type TechType = {
+  name: string
+  icon: string
+}
+
+type FaqType = {
+  question: string
+  answer: string
+}
+
+type ContactInfoType = {
+  email: string
+  phone: string
+  location: string
+  hours: string
 }
 
 export type {
@@ -76,5 +112,10 @@ export type {
   ValuesType,
   whyChooseUsType,
   resourcesType,
-  articleType
+  articleType,
+  StatType,
+  ProcessStepType,
+  TechType,
+  FaqType,
+  ContactInfoType,
 }
