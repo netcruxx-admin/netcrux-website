@@ -78,7 +78,14 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-2">
                 <Icon icon="mdi:map-marker-outline" className="mt-0.5 size-4 shrink-0" />
-                {contactInfo.location}
+                <a
+                  href={contactInfo.mapUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-colors hover:text-gray-900"
+                >
+                  {contactInfo.location}
+                </a>
               </li>
             </ul>
           </div>
@@ -86,7 +93,14 @@ export default function Footer() {
 
         <div className="flex flex-col items-center justify-between gap-3 border-t border-gray-200 pt-6 text-xs text-gray-400 md:flex-row md:text-sm">
           <p>© {new Date().getFullYear()} Net-Crux. All rights reserved.</p>
-          <p>Built with Next.js & Tailwind CSS</p>
+          <div className="flex gap-5">
+            <Link href="/privacy-policy" className="transition-colors hover:text-gray-600">
+              Privacy Policy
+            </Link>
+            <Link href="/terms" className="transition-colors hover:text-gray-600">
+              Terms & Conditions
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

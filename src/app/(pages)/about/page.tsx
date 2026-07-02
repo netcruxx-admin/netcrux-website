@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { Icon } from "@iconify/react"
 import type { Metadata } from "next"
 
@@ -35,26 +36,48 @@ export default function Page() {
       </div>
 
       <div className="mb-8 grid grid-cols-1 gap-8 md:grid-cols-2">
-        <div>
-          <h2 className="mb-2 text-xl font-semibold">Our Mission</h2>
-          <p className="text-sm text-gray-600 md:text-base">
-            To empower businesses with cutting-edge technology solutions that transform ideas into
-            reality. We work closely with our clients to understand their unique needs and deliver
-            tailored solutions that exceed expectations.
-          </p>
+        <div className="overflow-hidden">
+          <div className="relative h-62 w-full">
+            <Image
+              src="/expertise/desktop.jpg"
+              alt="Our Mission"
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover"
+            />
+          </div>
+          <div className="py-6">
+            <h2 className="mb-2 text-xl font-semibold">Our Mission</h2>
+            <p className="text-sm text-gray-600 md:text-base">
+              To empower businesses with cutting-edge technology solutions that transform ideas into
+              reality. We work closely with our clients to understand their unique needs and deliver
+              tailored solutions that exceed expectations.
+            </p>
+          </div>
         </div>
-        <div>
-          <h2 className="mb-2 text-xl font-semibold">Our Story</h2>
-          <p className="text-sm text-gray-600 md:text-base">
-            Founded by a small group of engineers and designers, Net-Crux has grown into a trusted
-            studio that has shipped 120+ products. We&apos;ve stayed lean and senior-led so every
-            client gets the attention their product deserves.
-          </p>
+        <div className="overflow-hidden">
+          <div className="relative h-62 w-full">
+            <Image
+              src="/expertise/design.jpg"
+              alt="Our Story"
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover"
+            />
+          </div>
+          <div className="py-6">
+            <h2 className="mb-2 text-xl font-semibold">Our Story</h2>
+            <p className="text-sm text-gray-600 md:text-base">
+              Founded by a small group of engineers and designers, Net-Crux has grown into a trusted
+              studio that has shipped 25+ products. We&apos;ve stayed lean and senior-led so every
+              client gets the attention their product deserves.
+            </p>
+          </div>
         </div>
       </div>
 
       {/* Team */}
-      <h2 className="mb-6 text-xl font-semibold md:text-2xl">Meet the Team</h2>
+      {/* <h2 className="mb-6 text-xl font-semibold md:text-2xl">Meet the Team</h2>
       <div className="mb-14 grid grid-cols-2 gap-6 text-center md:grid-cols-4">
         {team.map((item, i) => (
           <div
@@ -71,7 +94,7 @@ export default function Page() {
             <p className="text-sm text-gray-500">{item.role}</p>
           </div>
         ))}
-      </div>
+      </div> */}
 
       <h2 className="mb-6 text-xl font-semibold md:text-2xl">Our Values</h2>
       <div className="mb-14 grid grid-cols-1 gap-6 md:grid-cols-3">

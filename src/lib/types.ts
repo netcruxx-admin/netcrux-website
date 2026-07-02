@@ -71,6 +71,7 @@ type articleType = {
   author?: string
   date?: string
   readTime?: string
+  slug?: string
 }
 
 type StatType = {
@@ -99,6 +100,7 @@ type ContactInfoType = {
   email: string
   phone: string
   location: string
+  mapUrl: string
   hours: string
 }
 

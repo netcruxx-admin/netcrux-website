@@ -13,7 +13,7 @@ import {
 } from "../lib/constants"
 import Reveal from "@/components/common/Reveal"
 import CountUp from "@/components/common/CountUp"
-import ProjectGallery from "@/components/common/ProjectGallery"
+import ProjectsSlider from "@/components/common/ProjectsSlider"
 import AccentSwitcher from "@/components/common/AccentSwitcher"
 import ExpertiseCarousel from "@/components/common/ExpertiseCarousel"
 
@@ -124,52 +124,7 @@ export default function HomePage() {
               </Link>
             </div>
           </Reveal>
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {ourWork.map((item, i) => (
-              <Reveal key={i} delay={i * 120} className="h-full">
-                <div className="card-hover h-full overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm hover:border-gray-300">
-                  <ProjectGallery
-                    images={item.images}
-                    category={item.category}
-                    title={item.title}
-                    startDelay={Math.round((i * 3500) / 3)}
-                  />
-                  <div className="p-6 text-left">
-                    {item.link ? (
-                      <Link
-                        href={item.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="group/title mb-2 inline-flex items-center gap-1.5 text-lg font-semibold hover:text-accent md:text-xl"
-                      >
-                        {item.title}
-                        <Icon icon="mdi:open-in-new" className="size-4 opacity-0 transition group-hover/title:opacity-100" />
-                      </Link>
-                    ) : (
-                      <h3 className="mb-2 text-lg font-semibold md:text-xl">{item.title}</h3>
-                    )}
-                    <p className="mb-4 text-sm text-gray-500 md:text-base">{item.desc}</p>
-                    {item.link ? (
-                      <Link
-                        href={item.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-1.5 text-sm font-medium text-accent underline-offset-2 hover:underline"
-                      >
-                        <Icon icon="mdi:trending-up" className="size-4" />
-                        {item.result}
-                      </Link>
-                    ) : (
-                      <p className="flex items-center gap-1.5 text-sm font-medium text-accent">
-                        <Icon icon="mdi:trending-up" className="size-4" />
-                        {item.result}
-                      </p>
-                    )}
-                  </div>
-                </div>
-              </Reveal>
-            ))}
-          </div>
+          <ProjectsSlider items={ourWork} />
         </div>
       </section>
 
@@ -288,7 +243,7 @@ export default function HomePage() {
 
                   <div className="flex items-center justify-between border-t border-gray-200 pt-4 text-xs text-gray-400">
                     <span>{item.reviewDate}</span>
-                    <span className="flex items-center gap-3">
+                    {/* <span className="flex items-center gap-3">
                       <span className="flex items-center gap-1">
                         <Icon icon="mdi:thumb-up-outline" className="size-4" />
                         {item.likes}
@@ -297,7 +252,7 @@ export default function HomePage() {
                         <Icon icon="mdi:comment-outline" className="size-4" />
                         {item.comments}
                       </span>
-                    </span>
+                    </span> */}
                   </div>
                 </div>
               </Reveal>

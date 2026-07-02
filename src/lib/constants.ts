@@ -26,10 +26,10 @@ const navItems: NavItemType[] = [
     name: "Work",
     path: "/work",
   },
-  // {
-  //   name: "Insights",
-  //   path: "/insights",
-  // },
+  {
+    name: "Insights",
+    path: "/insights",
+  },
   {
     name: "About",
     path: "/about",
@@ -44,30 +44,31 @@ const navItems: NavItemType[] = [
 const contactInfo: ContactInfoType = {
   email: "netcruxx@gmail.com",
   phone: "+91 89883 84800",
-  location: "RCC Building, Civil Lines, Dharamshala, Distt Kangra HP 176215",
+  location: "Dharamshala.co, RCC Building, Civil Lines, Jawahar Nagar, Dharamshala, Himachal Pradesh 176215",
+  mapUrl: "https://maps.app.goo.gl/7KiRCSvrgjRBCL8BA",
   hours: "Mon–Fri, 9:00 AM – 6:00 PM IST",
 }
 
 const footerSocial: FooterSocialType[] = [
-  {
-    platform: "Twitter",
-    iconName: "mdi:twitter",
-    path: "https://twitter.com/netcrux",
-  },
+  // {
+  //   platform: "Twitter",
+  //   iconName: "mdi:twitter",
+  //   path: "https://twitter.com/netcrux",
+  // },
   {
     platform: "LinkedIn",
     iconName: "mdi:linkedin",
-    path: "https://linkedin.com/company/netcrux",
+    path: "https://www.linkedin.com/in/net-crux-bb7b4236a/",
   },
   {
     platform: "GitHub",
     iconName: "mdi:github",
-    path: "https://github.com/netcrux",
+    path: "https://github.com/netcruxx-admin",
   },
   {
     platform: "Instagram",
     iconName: "mdi:instagram",
-    path: "https://instagram.com/netcrux",
+    path: "https://www.instagram.com/net.crux",
   },
 ]
 
@@ -188,6 +189,14 @@ const ourWork: ourWorkType[] = [
     result: "Meal subscriptions & live delivery tracking",
     images: ["/mealbox.jpeg", "/mealbox1.jpeg", "/mealbox2.jpeg", "/mealbox3.jpeg"],
   },
+  {
+    title: "Buzzo",
+    category: "Photo Gallery App",
+    desc: "A simple, secure, and intelligent photo gallery app that gives you full control over your memories — everything stays on your device, never uploaded or shared.",
+    result: "Private, on-device photo management with zero data collection",
+    images: ["/work/buzzo/buzzo.jpeg", "/work/buzzo/buzzo2.jpeg", "/work/buzzo/buzzo3.jpeg", "/work/buzzo/buzzo4.jpeg", "/work/buzzo/buzzo5.jpeg", "/work/buzzo/buzzo6.jpeg"],
+    link: "https://play.google.com/store/apps/details?id=com.buzzo",
+  },
 ]
 
 const services: ServicesType[] = [
@@ -288,10 +297,10 @@ const techStack: TechType[] = [
 const aiTools: TechType[] = [
   { name: "Claude", icon: "simple-icons:anthropic" },
   { name: "ChatGPT", icon: "simple-icons:openai" },
-  { name: "GitHub Copilot", icon: "mdi:github" },
-  { name: "Cursor", icon: "mdi:cursor-default-outline" },
-  { name: "v0", icon: "mdi:vercel" },
-  { name: "Midjourney", icon: "simple-icons:midjourney" },
+  { name: "GitHub Copilot", icon: "simple-icons:github" },
+  { name: "Cursor", icon: "simple-icons:cursor" },
+  { name: "v0", icon: "simple-icons:vercel" },
+  { name: "Gemini", icon: "simple-icons:googlegemini" },
 ]
 
 const team: TeamType[] = [
@@ -401,63 +410,37 @@ const resources: resourcesType[] = [
 
 const topArticles: articleType[] = [
   {
-    img: "/public-image.png",
-    category: "Mobile",
-    title: "The Future of Mobile App Development: Trends to Watch in 2024",
-    desc: "Explore the latest trends shaping the mobile app landscape in 2024, from AI integration to AR.",
-    author: "Sophia Bennett",
-    date: "Jan 12, 2024",
-    readTime: "6 min read",
-  },
-  {
-    img: "/public-image.png",
-    category: "Web",
-    title: "Web App Development: Best Practices for Scalability and Performance",
-    desc: "Learn essential strategies for building applications that can handle rapid growth.",
-    author: "Liam Harper",
-    date: "Feb 03, 2024",
-    readTime: "8 min read",
-  },
-  {
-    img: "/public-image.png",
+    img: "/expertise/web.jpg",
     category: "Engineering",
-    title: "Choosing the Right Technology Stack for Your App",
-    desc: "Get expert advice on selecting the ideal technology stack for your app.",
-    author: "Ethan Carter",
-    date: "Feb 21, 2024",
-    readTime: "5 min read",
+    title: "Why We Choose Next.js for Every Web Project",
+    desc: "A deep dive into why Next.js is our default framework — from the App Router to built-in performance optimisations.",
+    author: "Net-Crux Team",
+    date: "Jun 10, 2026",
+    readTime: "7 min read",
+    slug: "why-we-choose-nextjs",
+  },
+  {
+    img: "/expertise/mobile.jpg",
+    category: "Mobile",
+    title: "React Native: One Codebase, Two Platforms, Zero Compromise",
+    desc: "How we use React Native's New Architecture to ship high-performance iOS and Android apps from a single shared codebase.",
+    author: "Net-Crux Team",
+    date: "Jun 20, 2026",
+    readTime: "8 min read",
+    slug: "react-native-ios-android",
+  },
+  {
+    img: "/expertise/api.jpg",
+    category: "Backend",
+    title: "Node.js + TypeScript: How We Build Reliable Backends",
+    desc: "An inside look at how we structure Node.js backends with TypeScript and PostgreSQL to build systems that scale.",
+    author: "Net-Crux Team",
+    date: "Jul 1, 2026",
+    readTime: "9 min read",
+    slug: "nodejs-typescript-backend",
   },
 ]
 
-const featuredArticles: articleType[] = [
-  {
-    category: "Mobile App Development",
-    title: "Building a Successful App: From Concept to Launch",
-    desc: "A step-by-step guide to creating a successful mobile app, from ideation to launch.",
-    img: "/public-image.png",
-    author: "Maya Patel",
-    date: "Mar 04, 2024",
-    readTime: "7 min read",
-  },
-  {
-    category: "Web App Development",
-    title: "Optimizing Your Web App for User Experience",
-    desc: "Discover techniques to enhance your web app's user experience, including responsive design.",
-    img: "/public-image.png",
-    author: "Sophia Bennett",
-    date: "Mar 18, 2024",
-    readTime: "6 min read",
-  },
-  {
-    category: "Technology Trends",
-    title: "The Rise of Serverless Architecture: Benefits and Use Cases",
-    desc: "Explore the advantages of serverless architecture, including scalability and cost savings.",
-    img: "/public-image.png",
-    author: "Liam Harper",
-    date: "Apr 02, 2024",
-    readTime: "9 min read",
-  },
-]
 
 export {
   navItems,
@@ -477,5 +460,4 @@ export {
   faqs,
   resources,
   topArticles,
-  featuredArticles,
 }

@@ -206,6 +206,15 @@ export default function ContactPage() {
                   <a href={`tel:${d.value.replace(/\s/g, "")}`} className="text-sm font-medium hover:underline">
                     {d.value}
                   </a>
+                ) : d.label === "Location" ? (
+                  <a
+                    href={contactInfo.mapUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm font-medium hover:underline"
+                  >
+                    {d.value}
+                  </a>
                 ) : (
                   <p className="text-sm font-medium">{d.value}</p>
                 )}
