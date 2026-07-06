@@ -14,7 +14,6 @@ import {
 import Reveal from "@/components/common/Reveal"
 import CountUp from "@/components/common/CountUp"
 import ProjectsSlider from "@/components/common/ProjectsSlider"
-import AccentSwitcher from "@/components/common/AccentSwitcher"
 import ExpertiseCarousel from "@/components/common/ExpertiseCarousel"
 
 export default function HomePage() {
@@ -31,7 +30,7 @@ export default function HomePage() {
         <div className="relative w-[90%] max-w-7xl">
           <div className="relative h-[460px] w-full overflow-hidden rounded-2xl shadow-lg md:h-[560px] lg:h-[680px]">
             <Image
-              src="/hero-image.png"
+              src="/image1.png"
               fill
               priority
               alt="background image of a computer."
@@ -74,15 +73,9 @@ export default function HomePage() {
                 </Link>
               </div>
             </div>
-            <div className="animate-fade-up absolute bottom-5 left-1/2 -translate-x-1/2 [animation-delay:600ms]">
-              <Icon icon="mdi:chevron-down" className="size-7 animate-bounce text-white/70" />
-            </div>
           </div>
         </div>
       </header>
-
-      {/* Accent color picker */}
-      <AccentSwitcher />
 
       {/* Stats */}
       <section className="flex justify-center px-4 py-6 md:px-8">

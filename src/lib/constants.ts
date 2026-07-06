@@ -197,6 +197,14 @@ const ourWork: ourWorkType[] = [
     images: ["/work/buzzo/buzzo.jpeg", "/work/buzzo/buzzo2.jpeg", "/work/buzzo/buzzo3.jpeg", "/work/buzzo/buzzo4.jpeg", "/work/buzzo/buzzo5.jpeg", "/work/buzzo/buzzo6.jpeg"],
     link: "https://play.google.com/store/apps/details?id=com.buzzo",
   },
+  {
+    title: "Rozgari",
+    category: "Web & Mobile App",
+    desc: "A dual-sided platform connecting workers with suppliers — job seekers can discover and apply for work opportunities while employers post requirements and find skilled workers instantly.",
+    result: "Seamless job matching for workers & suppliers",
+    images: ["/rozgari.png", "/rozgari1.png", "/rozgari2.png", "/rozgari3.png", "/rozgari5.png", "/rozgari6.png"],
+    link: "https://rozgari.com",
+  },
 ]
 
 const services: ServicesType[] = [

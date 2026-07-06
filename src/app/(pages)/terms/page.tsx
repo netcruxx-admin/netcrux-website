@@ -209,7 +209,7 @@ export default function Page() {
             9. Limitation of Liability
           </h2>
           <p className="mb-3">
-            To the fullest extent permitted by law, Net-Crux's total cumulative liability to you for
+            To the fullest extent permitted by law, Net-Crux&apos;s total cumulative liability to you for
             any claims arising out of or related to these Terms or the Services shall not exceed the
             total fees paid by you to Net-Crux in the three (3) months preceding the claim.
           </p>
