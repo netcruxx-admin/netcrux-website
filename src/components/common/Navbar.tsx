@@ -10,6 +10,8 @@ import { navItems } from "@/lib/constants"
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
+  const headerNavItems = navItems.filter((item) => item.name !== "Contact")
+
   function toggleMobileNav() {
     setIsOpen(!isOpen)
   }
@@ -32,7 +34,7 @@ export default function Navbar() {
       {/* Desktop nav */}
       <div className="hidden md:flex md:items-center">
         <ul className="mr-10 flex gap-6">
-          {navItems.map((item) => (
+          {headerNavItems.map((item) => (
             <Link href={item.path} key={item.name} className="cursor-pointer">
               {item.name}
             </Link>
@@ -42,7 +44,7 @@ export default function Navbar() {
           href="/contact"
           className="button-gradient cursor-pointer rounded px-4 py-2 font-bold text-white transition-all hover:brightness-110"
         >
-          Get a Quote
+          Contact us
         </Link>
       </div>
       {/* Mobile nav */}
@@ -53,7 +55,7 @@ export default function Navbar() {
       {isOpen && (
         <div className="absolute top-full left-0 z-10 flex w-full flex-col items-center gap-y-6 border-t border-gray-200 bg-primary-700/95 py-6 text-center backdrop-blur-md md:hidden">
           <ul className="flex flex-col gap-4">
-            {navItems.map((item, index) => (
+            {headerNavItems.map((item, index) => (
               <Link href={item.path} key={index} onClick={toggleNavOnClick}>
                 {item.name}
               </Link>
@@ -64,7 +66,7 @@ export default function Navbar() {
             onClick={toggleNavOnClick}
             className="button-gradient rounded px-4 py-2 font-bold text-white transition-all hover:brightness-110"
           >
-            Get a Quote
+            Contact us
           </Link>
         </div>
       )}
