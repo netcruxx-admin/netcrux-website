@@ -73,10 +73,10 @@ const footerSocial: FooterSocialType[] = [
 ]
 
 const stats: StatType[] = [
-  { value: "25+", label: "Projects delivered" },
-  { value: "15+", label: "Happy clients" },
-  { value: "1+", label: "Years of experience" },
-  { value: "100%", label: "Client satisfaction" },
+  { value: "30+", label: "Projects delivered" },
+  { value: "20+", label: "Happy clients" },
+  { value: "1.5+", label: "Years of experience" },
+  { value: "5+", label: "Team members" },
 ]
 
 const testimonials: TestimonialsType[] = [
@@ -176,7 +176,7 @@ const ourWork: ourWorkType[] = [
     link: "https://play.google.com/store/apps/details?id=com.medy.passenger",
   },
   {
-    title: "Medicare",
+    title: "Netcare",
     category: "Healthcare Platform",
     desc: "A healthcare app for both doctors and patients — patients book appointments and keep their full medical history in one place, while doctors manage schedules and access patient records securely.",
     result: "Unified records for doctors & patients",
@@ -204,6 +204,34 @@ const ourWork: ourWorkType[] = [
     result: "Seamless job matching for workers & suppliers",
     images: ["/rozgari.png", "/rozgari1.png", "/rozgari2.png", "/rozgari3.png", "/rozgari5.png", "/rozgari6.png"],
     link: "https://rozgari.com",
+  },
+  {
+    title: "Covershift",
+    category: "Healthcare Staffing Platform",
+    desc: "A dual-sided healthcare staffing platform — hospitals post shift requirements while doctors, nurses, and support staff browse, apply, and manage schedules from a mobile app, backed by a web admin dashboard.",
+    result: "Instant shift matching for hospitals & healthcare staff",
+    images: [
+      "/work/covershift/mobile/mobile1.jpeg",
+      "/work/covershift/website/website1.jpeg",
+      "/work/covershift/mobile/mobile2.jpeg",
+      "/work/covershift/website/website2.jpeg",
+      "/work/covershift/mobile/mobile3.jpeg",
+      "/work/covershift/website/website3.jpeg",
+      "/work/covershift/mobile/mobile4.jpeg",
+      "/work/covershift/website/website4.jpeg",
+    ],
+  },
+  {
+    title: "Zoom In Zoom Out",
+    category: "Marketing Agency Website",
+    desc: "A single-page site for a Dharamshala-based digital marketing agency — showcasing services, client portfolio, and AI, web, and design courses offered in partnership with CBitss, with a built-in enquiry form.",
+    result: "Portfolio, courses, and leads in a single scroll",
+    images: [
+      "/work/zoominzoomout/zoominzoomout-01.jpg",
+      "/work/zoominzoomout/zoominzoomout-02.jpg",
+      "/work/zoominzoomout/zoominzoomout-03.jpg",
+    ],
+    link: "https://www.zoominzoomout.in",
   },
 ]
 
