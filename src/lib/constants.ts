@@ -81,7 +81,7 @@ const stats: StatType[] = [
 
 const testimonials: TestimonialsType[] = [
   {
-    avatar: "/medy.jpeg",
+    avatar: "/work/medy/medy-01.jpeg",
     reviewer: "Madan Kumar",
     role: "Founder",
     company: "MedyTravels",
@@ -93,7 +93,7 @@ const testimonials: TestimonialsType[] = [
     comments: 3,
   },
   {
-    avatar: "/mealbox.jpeg",
+    avatar: "/work/mealbox/mealbox-01.jpeg",
     reviewer: "Aditya Sharma",
     role: "Founder",
     company: "Shiva Drink & Dine",
@@ -105,7 +105,7 @@ const testimonials: TestimonialsType[] = [
     comments: 2,
   },
   {
-    avatar: "/mealbox1.jpeg",
+    avatar: "/work/mealbox/mealbox-02.jpeg",
     reviewer: "Sahil Choudhary",
     role: "Owner",
     company: "Meal Box User",
@@ -122,47 +122,47 @@ const expertise: ExpertiseType[] = [
   {
     title: "Mobile App Development",
     desc: "Pixel-perfect iOS and Android apps built once with React Native and Flutter — native performance, faster launches, and a single codebase that's easier to grow.",
-    img: "/expertise/mobile.jpg",
+    img: "/expertise/expertise-mobile.jpg",
   },
   {
     title: "Web App Development",
     desc: "Blazing-fast, SEO-friendly web apps engineered with Next.js and React, tuned for sub-second loads and ready to scale from your first user to your millionth.",
-    img: "/expertise/web.jpg",
+    img: "/expertise/expertise-web.jpg",
   },
   {
     title: "AI Development & Integration",
     desc: "LLM-powered chatbots, copilots, semantic search, and workflow automation — built with OpenAI, Claude, and LangChain to make your product genuinely smarter.",
-    img: "/expertise/ai.jpg",
+    img: "/expertise/expertise-ai.jpg",
   },
   {
     title: "Blockchain Development",
     desc: "Smart contracts, dApps, token systems, and Web3 wallet integrations on Ethereum and EVM chains — secure, audited, and ready to handle real on-chain value.",
-    img: "/expertise/blockchain.jpg",
+    img: "/expertise/expertise-blockchain.jpg",
   },
   {
     title: "Desktop App Development",
     desc: "Cross-platform desktop apps for Windows, macOS, and Linux built with Electron — native-feeling experiences from a single, maintainable codebase.",
-    img: "/expertise/desktop.jpg",
+    img: "/expertise/expertise-desktop.jpg",
   },
   {
     title: "UI/UX Design",
     desc: "User research, wireframes, and reusable design systems that turn complex flows into interfaces people understand instantly — and convert better because of it.",
-    img: "/expertise/design.jpg",
+    img: "/expertise/expertise-design.jpg",
   },
   {
     title: "Cloud & DevOps",
     desc: "Automated CI/CD, containerized deployments, and resilient AWS and GCP architecture so you ship daily with confidence and sleep through traffic spikes.",
-    img: "/expertise/cloud.jpg",
+    img: "/expertise/expertise-cloud.jpg",
   },
   {
     title: "API & Backend Engineering",
     desc: "Secure, well-documented REST and GraphQL APIs and microservices that power your product and plug seamlessly into the tools your business already runs on.",
-    img: "/expertise/api.jpg",
+    img: "/expertise/expertise-api.jpg",
   },
   {
     title: "QA & Automation",
     desc: "End-to-end and automated test suites that catch regressions before your users do — protecting quality and uptime with every single release.",
-    img: "/expertise/qa.jpg",
+    img: "/expertise/expertise-qa.jpg",
   },
 ]
 
@@ -172,7 +172,7 @@ const ourWork: ourWorkType[] = [
     category: "Taxi Booking App",
     desc: "A ride-hailing app for booking taxis on demand, with real-time driver tracking, upfront fare estimates, and secure in-app payments.",
     result: "Live ride tracking & instant booking",
-    images: ["/medy.jpeg", "/medy1.jpeg", "/medy2.jpeg", "/medy3.jpeg"],
+    images: ["/work/medy/medy-01.jpeg", "/work/medy/medy-02.jpeg", "/work/medy/medy-03.jpeg", "/work/medy/medy-04.jpeg"],
     link: "https://play.google.com/store/apps/details?id=com.medy.passenger",
   },
   {
@@ -180,21 +180,28 @@ const ourWork: ourWorkType[] = [
     category: "Healthcare Platform",
     desc: "A healthcare app for both doctors and patients — patients book appointments and keep their full medical history in one place, while doctors manage schedules and access patient records securely.",
     result: "Unified records for doctors & patients",
-    images: ["/medicare1.jpeg", "/medicare2.jpeg", "/medicare3.jpeg", "/medicare4.jpeg"],
+    images: ["/work/netcare/netcare-01.jpeg", "/work/netcare/netcare-02.jpeg", "/work/netcare/netcare-03.jpeg", "/work/netcare/netcare-04.jpeg"],
   },
   {
     title: "MealBox",
     category: "Food & Delivery App",
     desc: "A tiffin-service app for subscribing to home-style meals, browsing daily menus, customizing plans, and tracking deliveries in real time.",
     result: "Meal subscriptions & live delivery tracking",
-    images: ["/mealbox.jpeg", "/mealbox1.jpeg", "/mealbox2.jpeg", "/mealbox3.jpeg"],
+    images: ["/work/mealbox/mealbox-01.jpeg", "/work/mealbox/mealbox-02.jpeg", "/work/mealbox/mealbox-03.jpeg", "/work/mealbox/mealbox-04.jpeg"],
   },
   {
     title: "Buzzo",
     category: "Photo Gallery App",
     desc: "A simple, secure, and intelligent photo gallery app that gives you full control over your memories — everything stays on your device, never uploaded or shared.",
     result: "Private, on-device photo management with zero data collection",
-    images: ["/work/buzzo/buzzo.jpeg", "/work/buzzo/buzzo2.jpeg", "/work/buzzo/buzzo3.jpeg", "/work/buzzo/buzzo4.jpeg", "/work/buzzo/buzzo5.jpeg", "/work/buzzo/buzzo6.jpeg"],
+    images: [
+      "/work/buzzo/buzzo-01.jpeg",
+      "/work/buzzo/buzzo-02.jpeg",
+      "/work/buzzo/buzzo-03.jpeg",
+      "/work/buzzo/buzzo-04.jpeg",
+      "/work/buzzo/buzzo-05.jpeg",
+      "/work/buzzo/buzzo-06.jpeg",
+    ],
     link: "https://play.google.com/store/apps/details?id=com.buzzo",
   },
   {
@@ -202,7 +209,14 @@ const ourWork: ourWorkType[] = [
     category: "Web & Mobile App",
     desc: "A dual-sided platform connecting workers with suppliers — job seekers can discover and apply for work opportunities while employers post requirements and find skilled workers instantly.",
     result: "Seamless job matching for workers & suppliers",
-    images: ["/rozgari.png", "/rozgari1.png", "/rozgari2.png", "/rozgari3.png", "/rozgari5.png", "/rozgari6.png"],
+    images: [
+      "/work/rozgari/rozgari-01.png",
+      "/work/rozgari/rozgari-02.png",
+      "/work/rozgari/rozgari-03.png",
+      "/work/rozgari/rozgari-04.png",
+      "/work/rozgari/rozgari-06.png",
+      "/work/rozgari/rozgari-07.png",
+    ],
     link: "https://rozgari.com",
   },
   {
@@ -211,14 +225,14 @@ const ourWork: ourWorkType[] = [
     desc: "A dual-sided healthcare staffing platform — hospitals post shift requirements while doctors, nurses, and support staff browse, apply, and manage schedules from a mobile app, backed by a web admin dashboard.",
     result: "Instant shift matching for hospitals & healthcare staff",
     images: [
-      "/work/covershift/mobile/mobile1.jpeg",
-      "/work/covershift/website/website1.jpeg",
-      "/work/covershift/mobile/mobile2.jpeg",
-      "/work/covershift/website/website2.jpeg",
-      "/work/covershift/mobile/mobile3.jpeg",
-      "/work/covershift/website/website3.jpeg",
-      "/work/covershift/mobile/mobile4.jpeg",
-      "/work/covershift/website/website4.jpeg",
+      "/work/covershift/mobile/covershift-mobile-01.jpeg",
+      "/work/covershift/web/covershift-web-01.jpeg",
+      "/work/covershift/mobile/covershift-mobile-02.jpeg",
+      "/work/covershift/web/covershift-web-02.jpeg",
+      "/work/covershift/mobile/covershift-mobile-03.jpeg",
+      "/work/covershift/web/covershift-web-03.jpeg",
+      "/work/covershift/mobile/covershift-mobile-04.jpeg",
+      "/work/covershift/web/covershift-web-04.jpeg",
     ],
   },
   {
@@ -446,7 +460,7 @@ const resources: resourcesType[] = [
 
 const topArticles: articleType[] = [
   {
-    img: "/expertise/web.jpg",
+    img: "/expertise/expertise-web.jpg",
     category: "Engineering",
     title: "Why We Choose Next.js for Every Web Project",
     desc: "A deep dive into why Next.js is our default framework — from the App Router to built-in performance optimisations.",
@@ -456,7 +470,7 @@ const topArticles: articleType[] = [
     slug: "why-we-choose-nextjs",
   },
   {
-    img: "/expertise/mobile.jpg",
+    img: "/expertise/expertise-mobile.jpg",
     category: "Mobile",
     title: "React Native: One Codebase, Two Platforms, Zero Compromise",
     desc: "How we use React Native's New Architecture to ship high-performance iOS and Android apps from a single shared codebase.",
@@ -466,7 +480,7 @@ const topArticles: articleType[] = [
     slug: "react-native-ios-android",
   },
   {
-    img: "/expertise/api.jpg",
+    img: "/expertise/expertise-api.jpg",
     category: "Backend",
     title: "Node.js + TypeScript: How We Build Reliable Backends",
     desc: "An inside look at how we structure Node.js backends with TypeScript and PostgreSQL to build systems that scale.",

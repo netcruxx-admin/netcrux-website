@@ -30,7 +30,7 @@ export default function HomePage() {
         <div className="relative w-[90%] max-w-7xl">
           <div className="relative h-[460px] w-full overflow-hidden rounded-2xl shadow-lg md:h-[560px] lg:h-[680px]">
             <Image
-              src="/image1.png"
+              src="/hero-background.png"
               fill
               priority
               alt="background image of a computer."

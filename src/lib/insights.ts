@@ -27,7 +27,7 @@ const insightArticles: InsightArticle[] = [
     author: "Net-Crux Team",
     date: "Jun 10, 2026",
     readTime: "7 min read",
-    img: "/expertise/web.jpg",
+    img: "/expertise/expertise-web.jpg",
     intro:
       "When clients come to us for a web application, the first technical question we answer internally is almost always the same: what framework do we build on? After shipping 25+ products across industries, our answer has consistently been Next.js — and the reasons go far beyond it being popular. Here is why it sits at the centre of our web stack.",
     sections: [
@@ -80,7 +80,7 @@ const insightArticles: InsightArticle[] = [
     author: "Net-Crux Team",
     date: "Jun 20, 2026",
     readTime: "8 min read",
-    img: "/expertise/mobile.jpg",
+    img: "/expertise/expertise-mobile.jpg",
     intro:
       "Building a mobile app used to mean a hard choice: write it twice (Swift for iOS, Kotlin for Android) or accept the performance trade-offs of older cross-platform tools. React Native has fundamentally changed that equation. Across our mobile projects — from taxi booking apps to food delivery platforms — React Native has let us ship production-quality apps on both platforms while sharing 85–95% of our codebase. Here is how we do it, and why it works.",
     sections: [
@@ -138,7 +138,7 @@ const insightArticles: InsightArticle[] = [
     author: "Net-Crux Team",
     date: "Jul 1, 2026",
     readTime: "9 min read",
-    img: "/expertise/api.jpg",
+    img: "/expertise/expertise-api.jpg",
     intro:
       "A great frontend experience is only as good as the backend powering it. At Net-Crux, our server-side stack centres on Node.js and TypeScript — a combination that gives us speed of development, type safety across the full stack, and enough flexibility to handle everything from simple REST APIs to complex real-time systems. This is how we architect our backends and why this stack has earned its place in every project we ship.",
     sections: [

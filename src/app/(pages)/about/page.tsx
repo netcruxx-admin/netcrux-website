@@ -39,7 +39,7 @@ export default function Page() {
         <div className="overflow-hidden">
           <div className="relative h-62 w-full">
             <Image
-              src="/expertise/desktop.jpg"
+              src="/expertise/expertise-desktop.jpg"
               alt="Our Mission"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
@@ -58,7 +58,7 @@ export default function Page() {
         <div className="overflow-hidden">
           <div className="relative h-62 w-full">
             <Image
-              src="/expertise/design.jpg"
+              src="/expertise/expertise-design.jpg"
               alt="Our Story"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
