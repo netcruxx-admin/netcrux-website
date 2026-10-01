@@ -45,7 +45,7 @@ export default function ProjectsSlider({ items }: { items: ourWorkType[] }) {
   return (
     <div>
       {/* Track */}
-      <div className="overflow-hidden" ref={emblaRef}>
+      <div className="-my-12 overflow-hidden py-12" ref={emblaRef}>
         <div className="-ml-6 flex touch-pan-y select-none">
           {items.map((item, i) => (
             <div

@@ -133,7 +133,15 @@ function CarouselContent({ className, ...props }: React.ComponentProps<"div">) {
   const { carouselRef, orientation } = useCarousel()
 
   return (
-    <div ref={carouselRef} className="overflow-hidden" data-slot="carousel-content">
+    <div
+      ref={carouselRef}
+      className={
+        orientation === "horizontal"
+          ? "-mx-3 -my-12 overflow-hidden px-3 py-12 [mask-image:linear-gradient(to_right,transparent,#000_1%,#000_99%,transparent)]"
+          : "-mx-12 -my-3 overflow-hidden px-12 py-3 [mask-image:linear-gradient(to_bottom,transparent,#000_1%,#000_99%,transparent)]"
+      }
+      data-slot="carousel-content"
+    >
       <div
         className={cn("flex", orientation === "horizontal" ? "-ml-4" : "-mt-4 flex-col", className)}
         {...props}

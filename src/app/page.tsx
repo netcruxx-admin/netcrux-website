@@ -156,17 +156,19 @@ export default function HomePage() {
           </p>
 
           {/* Infinite marquee */}
-          <div className="group relative mb-12 overflow-hidden [mask-image:linear-gradient(to_right,transparent,#000_8%,#000_92%,transparent)]">
-            <div className="animate-marquee flex w-max gap-3 group-hover:[animation-play-state:paused]">
-              {[...techStack, ...techStack].map((tech, i) => (
-                <div
-                  key={i}
-                  className="flex shrink-0 items-center gap-2 rounded-full border border-gray-200 bg-white shadow-sm px-4 py-2 text-sm text-gray-600"
-                >
-                  <Icon icon={tech.icon} className="size-5" />
-                  {tech.name}
-                </div>
-              ))}
+          <div className="mb-12">
+            <div className="group relative -my-4 overflow-hidden py-4 [mask-image:linear-gradient(to_right,transparent,#000_8%,#000_92%,transparent)]">
+              <div className="animate-marquee flex w-max gap-3 group-hover:[animation-play-state:paused]">
+                {[...techStack, ...techStack].map((tech, i) => (
+                  <div
+                    key={i}
+                    className="flex shrink-0 items-center gap-2 rounded-full border border-gray-200 bg-white shadow-sm px-4 py-2 text-sm text-gray-600"
+                  >
+                    <Icon icon={tech.icon} className="size-5" />
+                    {tech.name}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 
