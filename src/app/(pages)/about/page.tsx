@@ -69,7 +69,7 @@ export default function Page() {
             <h2 className="mb-2 text-xl font-semibold">Our Story</h2>
             <p className="text-sm text-gray-600 md:text-base">
               Founded by a small group of engineers and designers, Net-Crux has grown into a trusted
-              studio that has shipped 25+ products. We&apos;ve stayed lean and senior-led so every
+              studio that has shipped 30+ products. We&apos;ve stayed lean and senior-led so every
               client gets the attention their product deserves.
             </p>
           </div>

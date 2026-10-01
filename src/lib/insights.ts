@@ -29,7 +29,7 @@ const insightArticles: InsightArticle[] = [
     readTime: "7 min read",
     img: "/expertise/expertise-web.jpg",
     intro:
-      "When clients come to us for a web application, the first technical question we answer internally is almost always the same: what framework do we build on? After shipping 25+ products across industries, our answer has consistently been Next.js — and the reasons go far beyond it being popular. Here is why it sits at the centre of our web stack.",
+      "When clients come to us for a web application, the first technical question we answer internally is almost always the same: what framework do we build on? After shipping 30+ products across industries, our answer has consistently been Next.js — and the reasons go far beyond it being popular. Here is why it sits at the centre of our web stack.",
     sections: [
       {
         heading: "The App Router Changed Everything",
