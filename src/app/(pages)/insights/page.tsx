@@ -5,7 +5,7 @@ import { resources } from "@/lib/constants"
 import InsightsSearch from "@/components/common/InsightsSearch"
 
 export const metadata: Metadata = {
-  title: "Insights — Net-Crux",
+  title: "Insights - Net-Crux",
   description:
     "Articles, guides, and resources on mobile and web app development, design, and technology trends from the Net-Crux team.",
 }
@@ -21,7 +21,7 @@ export default function Page() {
 
       <InsightsSearch />
 
-      {/* Featured Articles — shown when featuredArticles has items with slugs */}
+      {/* Featured Articles - shown when featuredArticles has items with slugs */}
 
       <h2 className="mb-6 text-xl font-bold md:text-2xl">Resources</h2>
       <div className="mb-12 grid grid-cols-1 gap-6 md:grid-cols-3">

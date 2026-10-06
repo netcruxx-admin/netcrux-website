@@ -81,47 +81,56 @@ const stats: StatType[] = [
 
 const testimonials: TestimonialsType[] = [
   {
-    avatar: "/work/medy/medy-01.jpeg",
     reviewer: "Madan Kumar",
     role: "Founder",
-    company: "MedyTravels",
+    company: "Medy Travels",
     reviewDate: "Mar 18, 2026",
     rating: 5,
     review:
       "Net-Crux built the MedyTravels platform exactly the way we envisioned it. They understood the medical-travel space deeply, delivered a fast, reliable product, and stayed responsive long after launch. Our patient enquiries have grown steadily ever since.",
-    likes: 24,
-    comments: 3,
   },
   {
-    avatar: "/work/mealbox/mealbox-01.jpeg",
     reviewer: "Aditya Sharma",
-    role: "Founder",
-    company: "Shiva Drink & Dine",
+    role: "User",
+    company: "Meal Box Vendor",
     reviewDate: "Apr 26, 2026",
     rating: 5,
     review:
       "Meal Box has completely streamlined how we take and manage orders at Shiva Drink & Dine. The app is clean, quick, and our staff picked it up in a day. Net-Crux genuinely understood what a busy restaurant needs and it shows in every detail.",
-    likes: 19,
-    comments: 2,
   },
   {
-    avatar: "/work/mealbox/mealbox-02.jpeg",
     reviewer: "Sahil Choudhary",
-    role: "Owner",
-    company: "Meal Box User",
+    role: "User",
+    company: "Meal Box Vendor",
     reviewDate: "May 14, 2026",
     rating: 5,
     review:
-      "Meal Box made running my outlet so much easier — from menu updates to tracking daily orders, everything just works. It's smooth, dependable, and the support from Net-Crux has been outstanding. Highly recommend them to any food business.",
-    likes: 16,
-    comments: 1,
+      "Meal Box made running my outlet so much easier - from menu updates to tracking daily orders, everything just works. It's smooth, dependable, and the support from Net-Crux has been outstanding. Highly recommend them to any food business.",
+  },
+  {
+    reviewer: "Shruti Puri",
+    role: "Digital Marketing Officer",
+    company: "Zoom In Zoom Out",
+    reviewDate: "Aug 9, 2026",
+    rating: 5,
+    review:
+      "We'd been putting off a proper website for a while, and the Net-Crux team made it painless. I'm not a technical person, but they explained things simply and didn't mind my many small change requests. The site looks good, and we now just send clients the link instead of a PDF portfolio.",
+  },
+  {
+    reviewer: "Ravi Tighare",
+    role: "Founder",
+    company: "Shradha IT Solutions",
+    reviewDate: "Sep 3, 2026",
+    rating: 5,
+    review:
+      "We needed a platform that works for hospitals and healthcare staff alike, and Net-Crux delivered both the mobile app and the admin dashboard with real care. They grasped the staffing workflow quickly, communicated clearly at every step, and shipped a product our users find simple to use.",
   },
 ]
 
 const expertise: ExpertiseType[] = [
   {
     title: "Mobile App Development",
-    desc: "Pixel-perfect iOS and Android apps built once with React Native and Flutter — native performance, faster launches, and a single codebase that's easier to grow.",
+    desc: "Pixel-perfect iOS and Android apps built once with React Native and Flutter - native performance, faster launches, and a single codebase that's easier to grow.",
     img: "/expertise/expertise-mobile.jpg",
   },
   {
@@ -131,22 +140,22 @@ const expertise: ExpertiseType[] = [
   },
   {
     title: "AI Development & Integration",
-    desc: "LLM-powered chatbots, copilots, semantic search, and workflow automation — built with OpenAI, Claude, and LangChain to make your product genuinely smarter.",
+    desc: "LLM-powered chatbots, copilots, semantic search, and workflow automation - built with OpenAI, Claude, and LangChain to make your product genuinely smarter.",
     img: "/expertise/expertise-ai.jpg",
   },
   {
     title: "Blockchain Development",
-    desc: "Smart contracts, dApps, token systems, and Web3 wallet integrations on Ethereum and EVM chains — secure, audited, and ready to handle real on-chain value.",
+    desc: "Smart contracts, dApps, token systems, and Web3 wallet integrations on Ethereum and EVM chains - secure, audited, and ready to handle real on-chain value.",
     img: "/expertise/expertise-blockchain.jpg",
   },
   {
     title: "Desktop App Development",
-    desc: "Cross-platform desktop apps for Windows, macOS, and Linux built with Electron — native-feeling experiences from a single, maintainable codebase.",
+    desc: "Cross-platform desktop apps for Windows, macOS, and Linux built with Electron - native-feeling experiences from a single, maintainable codebase.",
     img: "/expertise/expertise-desktop.jpg",
   },
   {
     title: "UI/UX Design",
-    desc: "User research, wireframes, and reusable design systems that turn complex flows into interfaces people understand instantly — and convert better because of it.",
+    desc: "User research, wireframes, and reusable design systems that turn complex flows into interfaces people understand instantly - and convert better because of it.",
     img: "/expertise/expertise-design.jpg",
   },
   {
@@ -161,26 +170,19 @@ const expertise: ExpertiseType[] = [
   },
   {
     title: "QA & Automation",
-    desc: "End-to-end and automated test suites that catch regressions before your users do — protecting quality and uptime with every single release.",
+    desc: "End-to-end and automated test suites that catch regressions before your users do - protecting quality and uptime with every single release.",
     img: "/expertise/expertise-qa.jpg",
   },
 ]
 
 const ourWork: ourWorkType[] = [
   {
-    title: "MedyTravels",
-    category: "Taxi Booking App",
-    desc: "A ride-hailing app for booking taxis on demand, with real-time driver tracking, upfront fare estimates, and secure in-app payments.",
-    result: "Live ride tracking & instant booking",
-    images: ["/work/medy/medy-01.jpeg", "/work/medy/medy-02.jpeg", "/work/medy/medy-03.jpeg", "/work/medy/medy-04.jpeg"],
-    link: "https://play.google.com/store/apps/details?id=com.medy.passenger",
-  },
-  {
     title: "Netcare",
     category: "Healthcare Platform",
-    desc: "A healthcare app for both doctors and patients — patients book appointments and keep their full medical history in one place, while doctors manage schedules and access patient records securely.",
+    desc: "A healthcare app for both doctors and patients - patients book appointments and keep their full medical history in one place, while doctors manage schedules and access patient records securely.",
     result: "Unified records for doctors & patients",
     images: ["/work/netcare/netcare-01.jpeg", "/work/netcare/netcare-02.jpeg", "/work/netcare/netcare-03.jpeg", "/work/netcare/netcare-04.jpeg"],
+    link: "https://netcare.co.in",
   },
   {
     title: "MealBox",
@@ -188,41 +190,35 @@ const ourWork: ourWorkType[] = [
     desc: "A tiffin-service app for subscribing to home-style meals, browsing daily menus, customizing plans, and tracking deliveries in real time.",
     result: "Meal subscriptions & live delivery tracking",
     images: ["/work/mealbox/mealbox-01.jpeg", "/work/mealbox/mealbox-02.jpeg", "/work/mealbox/mealbox-03.jpeg", "/work/mealbox/mealbox-04.jpeg"],
+    link: "https://play.google.com/store/apps/details?id=com.netcruxx.mealbox",
   },
   {
-    title: "Buzzo",
-    category: "Photo Gallery App",
-    desc: "A simple, secure, and intelligent photo gallery app that gives you full control over your memories — everything stays on your device, never uploaded or shared.",
-    result: "Private, on-device photo management with zero data collection",
-    images: [
-      "/work/buzzo/buzzo-01.jpeg",
-      "/work/buzzo/buzzo-02.jpeg",
-      "/work/buzzo/buzzo-03.jpeg",
-      "/work/buzzo/buzzo-04.jpeg",
-      "/work/buzzo/buzzo-05.jpeg",
-      "/work/buzzo/buzzo-06.jpeg",
-    ],
-    link: "https://play.google.com/store/apps/details?id=com.buzzo",
+    title: "Medy Travels",
+    category: "Taxi Booking App",
+    desc: "A ride-hailing app for booking taxis on demand, with real-time driver tracking, upfront fare estimates, and secure in-app payments.",
+    result: "Live ride tracking & instant booking",
+    images: ["/work/medy/medy-01.jpeg", "/work/medy/medy-02.jpeg", "/work/medy/medy-03.jpeg", "/work/medy/medy-04.jpeg"],
+    link: "https://play.google.com/store/apps/details?id=com.medy.passenger",
   },
   {
-    title: "Rozgari",
+    title: "Junctia",
     category: "Web & Mobile App",
-    desc: "A dual-sided platform connecting workers with suppliers — job seekers can discover and apply for work opportunities while employers post requirements and find skilled workers instantly.",
+    desc: "A dual-sided platform connecting workers with suppliers - job seekers can discover and apply for work opportunities while employers post requirements and find skilled workers instantly.",
     result: "Seamless job matching for workers & suppliers",
     images: [
-      "/work/rozgari/rozgari-01.png",
-      "/work/rozgari/rozgari-02.png",
-      "/work/rozgari/rozgari-03.png",
-      "/work/rozgari/rozgari-04.png",
-      "/work/rozgari/rozgari-06.png",
-      "/work/rozgari/rozgari-07.png",
+      "/work/junctia/junctia-01.png",
+      "/work/junctia/junctia-02.png",
+      "/work/junctia/junctia-03.png",
+      "/work/junctia/junctia-04.png",
+      "/work/junctia/junctia-06.png",
+      "/work/junctia/junctia-07.png",
     ],
-    link: "https://rozgari.com",
+    link: "https://junctia.com",
   },
   {
     title: "Covershift",
     category: "Healthcare Staffing Platform",
-    desc: "A dual-sided healthcare staffing platform — hospitals post shift requirements while doctors, nurses, and support staff browse, apply, and manage schedules from a mobile app, backed by a web admin dashboard.",
+    desc: "A dual-sided healthcare staffing platform - hospitals post shift requirements while doctors, nurses, and support staff browse, apply, and manage schedules from a mobile app, backed by a web admin dashboard.",
     result: "Instant shift matching for hospitals & healthcare staff",
     images: [
       "/work/covershift/mobile/covershift-mobile-01.jpeg",
@@ -238,7 +234,7 @@ const ourWork: ourWorkType[] = [
   {
     title: "Zoom In Zoom Out",
     category: "Marketing Agency Website",
-    desc: "A single-page site for a Dharamshala-based digital marketing agency — showcasing services, client portfolio, and AI, web, and design courses offered in partnership with CBitss, with a built-in enquiry form.",
+    desc: "A single-page site for a Dharamshala-based digital marketing agency - showcasing services, client portfolio, and AI, web, and design courses offered in partnership with CBitss, with a built-in enquiry form.",
     result: "Portfolio, courses, and leads in a single scroll",
     images: [
       "/work/zoominzoomout/zoominzoomout-01.jpg",
@@ -246,6 +242,21 @@ const ourWork: ourWorkType[] = [
       "/work/zoominzoomout/zoominzoomout-03.jpg",
     ],
     link: "https://www.zoominzoomout.in",
+  },
+  {
+    title: "Buzzo",
+    category: "Photo Gallery App",
+    desc: "A simple, secure, and intelligent photo gallery app that gives you full control over your memories - everything stays on your device, never uploaded or shared.",
+    result: "Private, on-device photo management with zero data collection",
+    images: [
+      "/work/buzzo/buzzo-01.jpeg",
+      "/work/buzzo/buzzo-02.jpeg",
+      "/work/buzzo/buzzo-03.jpeg",
+      "/work/buzzo/buzzo-04.jpeg",
+      "/work/buzzo/buzzo-05.jpeg",
+      "/work/buzzo/buzzo-06.jpeg",
+    ],
+    link: "https://play.google.com/store/apps/details?id=com.buzzo",
   },
 ]
 
@@ -422,12 +433,12 @@ const faqs: FaqType[] = [
   {
     question: "Can you integrate AI into my product?",
     answer:
-      "Yes. We build LLM-powered chatbots, copilots, RAG-based semantic search, and workflow automation using OpenAI, Claude, and LangChain — integrated securely into your existing product and data.",
+      "Yes. We build LLM-powered chatbots, copilots, RAG-based semantic search, and workflow automation using OpenAI, Claude, and LangChain - integrated securely into your existing product and data.",
   },
   {
     question: "Do you build cross-platform mobile apps?",
     answer:
-      "We do. Using React Native and Flutter we ship a single, maintainable codebase that runs on both iOS and Android with native-feeling performance — faster to launch and cheaper to maintain than two separate apps.",
+      "We do. Using React Native and Flutter we ship a single, maintainable codebase that runs on both iOS and Android with native-feeling performance - faster to launch and cheaper to maintain than two separate apps.",
   },
   {
     question: "Do you work with blockchain and Web3?",
@@ -463,7 +474,7 @@ const topArticles: articleType[] = [
     img: "/expertise/expertise-web.jpg",
     category: "Engineering",
     title: "Why We Choose Next.js for Every Web Project",
-    desc: "A deep dive into why Next.js is our default framework — from the App Router to built-in performance optimisations.",
+    desc: "A deep dive into why Next.js is our default framework - from the App Router to built-in performance optimisations.",
     author: "Net-Crux Team",
     date: "Jun 10, 2026",
     readTime: "7 min read",

@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const article = getInsightBySlug(slug)
   if (!article) return {}
   return {
-    title: `${article.title} — Net-Crux`,
+    title: `${article.title} - Net-Crux`,
     description: article.desc,
   }
 }

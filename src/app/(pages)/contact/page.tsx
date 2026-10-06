@@ -63,7 +63,7 @@ export default function ContactPage() {
       <h1 className="mb-4 text-4xl font-bold md:text-5xl">Let&apos;s Build Something Together</h1>
       <p className="mb-10 max-w-2xl text-gray-500">
         Tell us about your project and we&apos;ll get back to you within one business day with next
-        steps. No obligation, no jargon — just a conversation about your idea.
+        steps. No obligation, no jargon - just a conversation about your idea.
       </p>
 
       <div className="grid grid-cols-1 gap-10 md:grid-cols-5">
@@ -175,7 +175,7 @@ export default function ContactPage() {
           {status === "success" && (
             <p className="flex items-center gap-2 text-sm font-medium text-green-600">
               <Icon icon="mdi:check-circle-outline" className="size-4 shrink-0" />
-              Thanks! Your enquiry has been sent — we&apos;ll get back to you within one business day.
+              Thanks! Your enquiry has been sent - we&apos;ll get back to you within one business day.
             </p>
           )}
           {status === "error" && (

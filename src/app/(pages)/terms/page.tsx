@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Terms & Conditions — Net-Crux",
+  title: "Terms & Conditions - Net-Crux",
   description:
     "Read the terms and conditions governing the use of Net-Crux IT Services' website and software development services.",
 }
@@ -291,7 +291,7 @@ export default function Page() {
           </p>
         </section>
 
-        {/* 14 — Contact */}
+        {/* 14 - Contact */}
         <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
           <h2 className="mb-3 text-xl font-semibold text-gray-900">14. Contact Us</h2>
           <p className="mb-4">

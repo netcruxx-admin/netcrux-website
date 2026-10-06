@@ -93,7 +93,7 @@ const figtree = Figtree({
 
 export const metadata: Metadata = {
   title: {
-    default: "Net-Crux — Mobile & Web App Development Studio",
+    default: "Net-Crux - Mobile & Web App Development Studio",
     template: "%s",
   },
   description:
@@ -108,7 +108,7 @@ export const metadata: Metadata = {
     "Net-Crux",
   ],
   openGraph: {
-    title: "Net-Crux — Mobile & Web App Development Studio",
+    title: "Net-Crux - Mobile & Web App Development Studio",
     description:
       "We design and build mobile and web apps that drive business growth. From concept to launch and beyond.",
     type: "website",

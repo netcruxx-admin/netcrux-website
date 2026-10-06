@@ -6,7 +6,7 @@ import type { Metadata } from "next"
 import { ourValues, stats, team, whyChooseUs } from "@/lib/constants"
 
 export const metadata: Metadata = {
-  title: "About — Net-Crux",
+  title: "About - Net-Crux",
   description:
     "Net-Crux is a mobile and web app development studio. Meet the team, our values, and why businesses choose us.",
 }
@@ -17,7 +17,7 @@ export default function Page() {
       <div className="mb-8">
         <h1 className="mb-4 text-4xl font-bold md:text-5xl">About Us</h1>
         <p className="max-w-2xl text-sm text-gray-600 md:text-base">
-          At Net-Crux, we&apos;re more than a development firm — we&apos;re your partners in
+          At Net-Crux, we&apos;re more than a development firm - we&apos;re your partners in
           innovation. We specialize in mobile and web app development that drives business growth and
           user engagement, turning ambitious ideas into products people love to use.
         </p>

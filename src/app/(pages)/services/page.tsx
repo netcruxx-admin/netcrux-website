@@ -5,7 +5,7 @@ import type { Metadata } from "next"
 import { process, services } from "@/lib/constants"
 
 export const metadata: Metadata = {
-  title: "Services — Net-Crux",
+  title: "Services - Net-Crux",
   description:
     "End-to-end app development services: mobile, web, UI/UX design, cloud & DevOps, APIs, and ongoing QA and maintenance.",
 }

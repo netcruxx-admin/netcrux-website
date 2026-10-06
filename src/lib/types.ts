@@ -13,12 +13,9 @@ type TestimonialsType = {
   reviewer: string
   role: string
   company: string
-  avatar: string
   reviewDate: string
   rating: number
   review: string
-  likes: number
-  comments: number
 }
 
 type ExpertiseType = {

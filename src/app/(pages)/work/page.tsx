@@ -6,9 +6,9 @@ import { ourWork } from "@/lib/constants"
 import ProjectGallery from "@/components/common/ProjectGallery"
 
 export const metadata: Metadata = {
-  title: "Our Work — Net-Crux",
+  title: "Our Work - Net-Crux",
   description:
-    "Explore mobile and web apps Net-Crux has designed and built — from FinTech and e-commerce to healthcare and logistics.",
+    "Explore mobile and web apps Net-Crux has designed and built - from FinTech and e-commerce to healthcare and logistics.",
 }
 
 export default function Page() {
@@ -17,7 +17,7 @@ export default function Page() {
       <h1 className="mb-4 text-4xl font-bold md:text-5xl">Our Work</h1>
       <p className="mb-10 max-w-2xl text-gray-500">
         A selection of products we&apos;ve designed and engineered for startups and growing
-        businesses — each built to solve a real problem and drive measurable results.
+        businesses - each built to solve a real problem and drive measurable results.
       </p>
 
       <div className="mb-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">

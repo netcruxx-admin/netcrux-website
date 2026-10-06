@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — Net-Crux",
+  title: "Privacy Policy - Net-Crux",
   description:
     "Learn how Net-Crux IT Services collects, uses, and protects your personal information.",
 }
@@ -69,11 +69,11 @@ export default function Page() {
           </p>
           <ul className="list-disc space-y-2 pl-5">
             <li>
-              <span className="font-medium text-gray-800">Preference cookies</span> — to remember
+              <span className="font-medium text-gray-800">Preference cookies</span> - to remember
               your selected theme, accent color, and font settings between visits.
             </li>
             <li>
-              <span className="font-medium text-gray-800">Analytics cookies</span> — to understand
+              <span className="font-medium text-gray-800">Analytics cookies</span> - to understand
               how visitors interact with our site so we can improve content and performance.
             </li>
           </ul>

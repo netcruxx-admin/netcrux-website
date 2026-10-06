@@ -15,6 +15,7 @@ import Reveal from "@/components/common/Reveal"
 import CountUp from "@/components/common/CountUp"
 import ProjectsSlider from "@/components/common/ProjectsSlider"
 import ExpertiseCarousel from "@/components/common/ExpertiseCarousel"
+import TestimonialsCarousel from "@/components/common/TestimonialsCarousel"
 
 export default function HomePage() {
   return (
@@ -100,7 +101,7 @@ export default function HomePage() {
           <h2 className="mb-2 text-3xl font-bold md:text-4xl">Our Expertise</h2>
           <p className="mb-10 max-w-2xl text-gray-600">
             From first sketch to global scale, we bring together design, engineering, and cloud
-            know-how to build digital products that perform — and keep performing.
+            know-how to build digital products that perform - and keep performing.
           </p>
           <ExpertiseCarousel items={expertise} />
         </Reveal>
@@ -152,7 +153,7 @@ export default function HomePage() {
         <Reveal className="w-[90%] max-w-7xl text-center">
           <h2 className="mb-2 text-3xl font-bold md:text-4xl">Technologies We Use</h2>
           <p className="mb-10 text-gray-600">
-            A modern, battle-tested toolkit — now supercharged with the latest AI capabilities.
+            A modern, battle-tested toolkit - now supercharged with the latest AI capabilities.
           </p>
 
           {/* Infinite marquee */}
@@ -179,7 +180,7 @@ export default function HomePage() {
             </div>
             <p className="mb-6 text-sm text-gray-600 md:text-base">
               We build AI features into your product and use leading AI tools across our own workflow
-              — so you get smarter software, shipped faster.
+              - so you get smarter software, shipped faster.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               {aiTools.map((tool, i) => (
@@ -202,57 +203,7 @@ export default function HomePage() {
           <Reveal>
             <h2 className="mb-8 text-3xl font-bold md:text-4xl">Client Testimonials</h2>
           </Reveal>
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-            {testimonials.map((item, i) => (
-              <Reveal key={i} delay={i * 120} className="h-full">
-                <div className="card-hover flex h-full flex-col rounded-2xl border border-gray-200 bg-white shadow-sm p-6 hover:border-gray-300">
-                  <div className="mb-4 flex items-center gap-3">
-                    <Image
-                      src={item.avatar}
-                      height={48}
-                      width={48}
-                      alt={item.reviewer}
-                      className="size-12 rounded-full object-cover"
-                    />
-                    <div>
-                      <h5 className="font-semibold">{item.reviewer}</h5>
-                      <p className="text-xs text-gray-500">
-                        {item.role}, {item.company}
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="mb-3 flex gap-0.5 text-amber-400">
-                    {Array.from({ length: 5 }).map((_, idx) => (
-                      <Icon
-                        key={idx}
-                        icon={idx < item.rating ? "mdi:star" : "mdi:star-outline"}
-                        className="size-5"
-                      />
-                    ))}
-                  </div>
-
-                  <p className="mb-5 flex-1 text-sm leading-relaxed text-gray-600">
-                    &ldquo;{item.review}&rdquo;
-                  </p>
-
-                  <div className="flex items-center justify-between border-t border-gray-200 pt-4 text-xs text-gray-400">
-                    <span>{item.reviewDate}</span>
-                    {/* <span className="flex items-center gap-3">
-                      <span className="flex items-center gap-1">
-                        <Icon icon="mdi:thumb-up-outline" className="size-4" />
-                        {item.likes}
-                      </span>
-                      <span className="flex items-center gap-1">
-                        <Icon icon="mdi:comment-outline" className="size-4" />
-                        {item.comments}
-                      </span>
-                    </span> */}
-                  </div>
-                </div>
-              </Reveal>
-            ))}
-          </div>
+          <TestimonialsCarousel items={testimonials} />
         </div>
       </section>
     </main>

@@ -66,8 +66,8 @@ export async function POST(request: Request) {
   const plainText = [
     `Name: ${name}`,
     `Email: ${email}`,
-    `Service: ${service || "—"}`,
-    `Budget: ${budget || "—"}`,
+    `Service: ${service || "-"}`,
+    `Budget: ${budget || "-"}`,
     "",
     "Message:",
     message,
@@ -78,8 +78,8 @@ export async function POST(request: Request) {
       <h2 style="margin: 0 0 16px;">New project enquiry</h2>
       <p><strong>Name:</strong> ${escapeHtml(name)}</p>
       <p><strong>Email:</strong> ${escapeHtml(email)}</p>
-      <p><strong>Service:</strong> ${escapeHtml(service || "—")}</p>
-      <p><strong>Budget:</strong> ${escapeHtml(budget || "—")}</p>
+      <p><strong>Service:</strong> ${escapeHtml(service || "-")}</p>
+      <p><strong>Budget:</strong> ${escapeHtml(budget || "-")}</p>
       <p><strong>Message:</strong></p>
       <p style="white-space: pre-wrap;">${escapeHtml(message)}</p>
     </div>
@@ -90,7 +90,7 @@ export async function POST(request: Request) {
       from: `"NetCrux Website" <${user}>`,
       to: user,
       replyTo: `"${name}" <${email}>`,
-      subject: `New project enquiry — ${name}`,
+      subject: `New project enquiry - ${name}`,
       text: plainText,
       html,
     })
